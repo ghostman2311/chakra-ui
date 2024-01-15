@@ -4,21 +4,63 @@ import {
   Button,
   Grid,
   GridItem,
+  Icon,
   Switch,
   Text,
 } from "@chakra-ui/react";
-import { SubscriptionHeader } from "../components/SubscriptionHeader";
-
+import { InfoOutlineIcon } from '@chakra-ui/icons';
+import { Support } from "../components";
 const Subscription = () => {
   return (
-    <Box
-      w="100vw"
-      h={{ base: "auto", md: "100vh" }}
-      bg="#101924"
-      px={{ base: 4, md: 14 }}
-      py={12}
-    >
-      <SubscriptionHeader />
+    <Box w="100vw" h={{base:'auto',md:'100vh'}}bg="#101924" px={{ base: 4, md: 14 }} py={12}>
+      <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
+        Manage Subscription
+      </Text>
+      <Grid
+        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        gap={7}
+        bg="#101924"
+        color="#8094ae"
+      >
+        <GridItem>
+          <Box>
+            <Text fontSize={{base:'20',sm:"40"}} fontWeight="400" color={"white"}>
+              My Subscriptions
+            </Text>
+            <Text color="#8094ae" fontSize="1.4rem" fontWeight="400" pr={1}>
+              Here is list of package/product that you have subscribed.
+              <Icon as={InfoOutlineIcon} boxSize={4} mr={2} color={'#798BFF'}/>
+            </Text>
+          </Box>
+        </GridItem>
+
+        <GridItem   
+          display="flex"
+          alignItems="center"
+          justifyContent={{ base: "flex-start", md: "flex-end" }}
+        >
+          <Box
+          // sx={{ border: "2px solid white" }}
+          >
+            <Button
+              colorScheme="blue"
+              bgColor={"#18212d"}
+              color={"#6576ff"}
+              borderColor={"#333f77"}
+              variant="outline"
+              fontSize={17}
+              sx={{
+                '&:hover': {
+                    bgColor:"#6576ff",
+                    color:'white'
+                }}}
+            >
+              View Pricing
+            </Button>
+          </Box>
+        </GridItem>
+      </Grid>
+      {/* seond box */}
       <Grid
         templateColumns={{ base: "1fr", md: "3.5fr 1.5fr" }}
         bg="#101924"
@@ -28,7 +70,7 @@ const Subscription = () => {
         overflow="hidden"
         sx={{ border: "1px solid #203247" }}
       >
-        <GridItem py={{ base: 5, md: 10 }} bgColor={"#18212d"}>
+        <GridItem py={{ base: 5, md: 10 }} bgColor={'#18212d'}>
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
@@ -55,29 +97,17 @@ const Subscription = () => {
                 </Badge>
               </Box>
               <Text color="#8094ae" fontSize="0.8rem" fontWeight="600" mt={2}>
-                Subscription ID:
-                <Text as="span" color="#b6c6e3">
-                  100394949
-                </Text>
+                Subscription ID:<span color="white">100394949</span>
               </Text>
             </Box>
             <Box
               display={"flex"}
               justifyContent={{ base: "none", md: "center" }}
               my={{ base: 4, md: 0 }}
-              alignItems={"center"}
-              gap={3}
+              alignContent={"center"}
+              gap={2}
             >
-              <Switch
-                sx={{
-                  "span.chakra-switch__track:not([data-checked])": {
-                    backgroundColor: "#243244",
-                    borderRadius: "1.5rem",
-                    border: "#3b526f solid 2px",
-                  },
-                }}
-                size="md"
-              />
+              <Switch sx={{ color: "#6576ff" }} size="lg" />
               <Text color="#8094ae" fontSize="0.8rem" fontWeight="600">
                 Auto renew
               </Text>
@@ -142,10 +172,9 @@ const Subscription = () => {
             variant="outline"
             fontSize={15}
             sx={{
-              "&:hover": {
-                bgColor: "#6576ff",
-              },
-            }}
+                '&:hover': {
+                    bgColor:"#6576ff"
+                }}}
           >
             Change Plan
           </Button>
@@ -154,12 +183,9 @@ const Subscription = () => {
             fontSize="13"
             fontWeight="400"
             textAlign={"center"}
-            as="i"
           >
             Next Billing on{" "}
-            <Text as="i" style={{ color: "#526484" }}>
-              Oct 11, 2020
-            </Text>
+            <span style={{ color: "#526484" }}>Oct 11, 2020</span>
           </Text>
         </GridItem>
       </Grid>
@@ -172,7 +198,7 @@ const Subscription = () => {
         overflow="hidden"
         sx={{ border: "1px solid #203247" }}
       >
-        <GridItem py={{ base: 5, md: 10 }} bgColor={"#18212d"}>
+        <GridItem py={{ base: 5, md: 10 }} bgColor={'#18212d'} >
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
@@ -200,30 +226,18 @@ const Subscription = () => {
                 </Badge>
               </Box>
               <Text color="#8094ae" fontSize="0.8rem" fontWeight="600" mt={1}>
-                Subscription ID:
-                <Text as="span" color="#b6c6e3">
-                  100394949
-                </Text>
+                Subscription ID:<span color="white">100394949</span>
               </Text>
             </Box>
             <Box
               display={"flex"}
               justifyContent={{ base: "none", md: "center" }}
               my={{ base: 4, md: 0 }}
-              alignItems={"center"}
-              gap={3}
+              alignContent={"center"}
+              gap={2}
             >
-              <Switch
-                sx={{
-                  "span.chakra-switch__track:not([data-checked])": {
-                    backgroundColor: "#243244",
-                    borderRadius: "1.5rem",
-                    border: "#3b526f solid 2px",
-                  },
-                }}
-                size="md"
-              />
-              <Text color="#8094ae" fontSize="0.8rem" fontWeight="600">
+              <Switch sx={{ color: "#6576ff" }} size="lg" />
+              <Text color="#8094ae" fontSize="0.8rem" fontWeight="600" mt={1}>
                 Auto renew
               </Text>
             </Box>
@@ -264,7 +278,7 @@ const Subscription = () => {
                 Access
               </Text>
               <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
-                Up to 10 Members
+                Unlimited
               </Text>
             </Box>
           </Box>
@@ -288,11 +302,10 @@ const Subscription = () => {
             variant="outline"
             fontSize={15}
             sx={{
-              "&:hover": {
-                bgColor: "#6576ff",
-                color: "white",
-              },
-            }}
+                '&:hover': {
+                    bgColor:"#6576ff",
+                    color:"white"
+                }}}
           >
             Renew Plan
           </Button>
@@ -301,12 +314,12 @@ const Subscription = () => {
             fontSize="13"
             fontWeight="400"
             textAlign={"center"}
-            as="i"
           >
-            You can renew the plan anytime.
+           You can renew the plan anytime.
           </Text>
         </GridItem>
       </Grid>
+      <Support/>
     </Box>
   );
 };

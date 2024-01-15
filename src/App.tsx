@@ -1,8 +1,17 @@
 import "./App.css";
-import Subscription from "./pages/Subscription";
+import Dashboard from "./pages/dashboard/dashboard";
+import Downloads from "./pages/downloads/downloads";
+import Subscription from "./pages/subscription";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  return <Subscription />;
+  return (
+    <Routes>
+      <Route index element={<Dashboard />} />
+      <Route path="downloads" element={<Downloads />} />
+      <Route path="subscription" element={<Subscription />} />
+    </Routes>
+  );
 }
 
 export default App;
