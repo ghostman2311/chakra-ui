@@ -8,7 +8,7 @@ import Info from "../../assets/dashboard/info.svg";
 
 const Dashboard = () => {
   return (
-    <Box w="100vw" bg="#101924" px={{ base: 4, md: 14 }} py={12}>
+    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
       <Box bg="#101924" color="#8094ae">
         <Text fontSize={{base:'20',sm:"40"}} fontWeight="400" color={"white"}>
           Welcome, Abu Bin Ishtiyak
@@ -95,7 +95,7 @@ const Dashboard = () => {
       </Grid>
       {/* Enterprise plan*/}
       <Grid
-        templateColumns={{ base: "1fr", md: "1fr " }}
+        templateColumns={"1fr "}
         mt={7}
         overflow="hidden"
         bgColor={"#18212d"}

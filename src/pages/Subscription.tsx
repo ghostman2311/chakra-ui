@@ -12,12 +12,12 @@ import { InfoOutlineIcon } from '@chakra-ui/icons';
 import { Support } from "../components";
 const Subscription = () => {
   return (
-    <Box w="100vw" h={{base:'auto',md:'100vh'}}bg="#101924" px={{ base: 4, md: 14 }} py={12}>
+    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
       <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
         Manage Subscription
       </Text>
       <Grid
-        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        templateColumns={{ base: "1fr", md: "2fr 1fr" }}
         gap={7}
         bg="#101924"
         color="#8094ae"
@@ -27,7 +27,7 @@ const Subscription = () => {
             <Text fontSize={{base:'20',sm:"40"}} fontWeight="400" color={"white"}>
               My Subscriptions
             </Text>
-            <Text color="#8094ae" fontSize="1.4rem" fontWeight="400" pr={1}>
+            <Text color="#8094ae" fontSize={{md:14,lg:"16"}} fontWeight="400" pr={1} sx={{textWrap:'no-wrap'}}>
               Here is list of package/product that you have subscribed.
               <Icon as={InfoOutlineIcon} boxSize={4} mr={2} color={'#798BFF'}/>
             </Text>
