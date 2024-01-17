@@ -1,6 +1,6 @@
 import type { ThemeOverride } from "@chakra-ui/react";
 import { Colors } from "./colors";
-import { buttonTheme } from "../../components/Button/Contained";
+
 
 export const customTheme: ThemeOverride = {
   config: {
@@ -17,7 +17,4 @@ export const customTheme: ThemeOverride = {
     md: "4px",
     sm: "2px",
   },
-  components: {
-    Button: buttonTheme
-  }
 };

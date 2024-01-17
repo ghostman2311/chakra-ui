@@ -7,7 +7,12 @@ interface INotificationBlock {
   checkedLabel?: string;
 }
 
-const NotificationBlock = ({title,subTitle,checked,checkedLabel}:INotificationBlock) => {
+const NotificationBlock = ({
+  title,
+  subTitle,
+  checked,
+  checkedLabel,
+}: INotificationBlock) => {
   return (
     <Box mt={9} color={"white"}>
       <Heading as="h4" size="md" sx={{ color: "white" }}>

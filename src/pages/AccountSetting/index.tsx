@@ -6,7 +6,7 @@ import {
 import { InfoOutlineIcon } from "@chakra-ui/icons";
 import SettingTabs from "./components/SettingsTab";
 import Billing from "./components/Billing";
-import Notifications from "../NotificationSetting/notifications";
+import Notifications from "../NotificationSetting";
 
 const AccountSetting = () => {
   const tabs=[{
