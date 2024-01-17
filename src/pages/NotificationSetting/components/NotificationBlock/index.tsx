@@ -38,7 +38,7 @@ const NotificationBlock = ({ data }: IData) => {
             {item?.checkedData?.map((check,i) => {
               return (
                 <Box mt={2} key={i} display={'flex'} gap={2}>
-                  <Switch sx={{ color: "#6576ff" }} size="lg" isChecked={check.checked} />
+                  <Switch sx={{ color: "active" }} size="lg" isChecked={check.checked} />
                   <Text
                     color="#B6C6E3"
                     fontSize="14"
