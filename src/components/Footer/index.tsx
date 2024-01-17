@@ -81,7 +81,7 @@ const Footer=()=> {
       </Menu>
       <Box display={'flex'} justifyContent={'center'} alignItems={'center'} color='main' gap={1}>
       <CiGlobe />
-      <Text fontSize={14} color='main'>
+      <Text fontSize={14} sx={{color:'main'}}>
        Select Region
       </Text>
       </Box>
