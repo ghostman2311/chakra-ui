@@ -11,6 +11,7 @@ import {
 import { InfoOutlineIcon } from "@chakra-ui/icons";
 import SettingTabs from "./settingTabs";
 import Billing from "./billing";
+import Notifications from "../NotificationSetting/notifications";
 
 const AccountSetting = () => {
   const tabs=[{
@@ -28,7 +29,7 @@ const AccountSetting = () => {
   },{
     key:'notifications',
     value:'Notifications', 
-     component:<Billing/>
+     component:<Notifications/>
   }]
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>

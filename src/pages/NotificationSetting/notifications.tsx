@@ -1,8 +1,11 @@
 import React from 'react'
+import NotificationBlock from './notificationBlock'
 
 const Notifications=()=> {
   return (
-    <div>notifications</div>
+    <>
+    <NotificationBlock title='Notification Settings' subTitle='You will get only notification what have enabled.'/>
+    </>
   )
 }
 
