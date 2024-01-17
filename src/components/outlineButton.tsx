@@ -6,7 +6,7 @@ interface IOutlinedButton {
   sx?: SystemStyleObject;
 }
 
-const ContainedButton = ({ fontSize, title, sx }: IOutlinedButton) => {
+const OutlineButton = ({ fontSize, title, sx }: IOutlinedButton) => {
   return (
     <Button
       bgColor={"#18212d"}
@@ -27,4 +27,4 @@ const ContainedButton = ({ fontSize, title, sx }: IOutlinedButton) => {
   );
 };
 
-export default ContainedButton;
+export default OutlineButton;
