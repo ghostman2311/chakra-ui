@@ -1,16 +1,27 @@
 import { Box, Grid, Text } from "@chakra-ui/react";
-import { ContainedButton, DashboardBox, Support } from "../../components";
+import { DashboardBox, Support } from "../../components";
 import Icon from "../../assets/dashboard/icon.svg";
 import Account from "../../assets/dashboard/account.svg";
 import Billing from "../../assets/dashboard/billing.svg";
 import Info from "../../assets/dashboard/info.svg";
-
+import EnterprisePlan from "./enterprisePlan";
 
 const Dashboard = () => {
+  const enterprisePlanData = {
+    plan: "Enterpise Plan",
+    amount: "$599.00 / Yearly",
+    buttonText: "View Plan",
+    subTitle:
+      "Unlimited access with priority support, 99.95% uptime, powerfull features and more...",
+  };
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
       <Box bg="#101924" color="#8094ae">
-        <Text fontSize={{base:'20',sm:"40"}} fontWeight="400" color={"white"}>
+        <Text
+          fontSize={{ base: "20", sm: "40" }}
+          fontWeight="400"
+          color={"white"}
+        >
           Welcome, Abu Bin Ishtiyak
         </Text>
         <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
@@ -94,54 +105,8 @@ const Dashboard = () => {
         </GridItem> */}
       </Grid>
       {/* Enterprise plan*/}
-      <Grid
-        templateColumns={"1fr "}
-        mt={7}
-        overflow="hidden"
-        bgColor={"#18212d"}
-        borderRadius={10}
-        sx={{ border: "1px solid #203247" }}
-      >
-        <Box
-          display={"flex"}
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
-          borderBottom="1px solid #203247"
-          p={7}
-        >
-          <Box>
-            <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
-              <span style={{ color: "white" }}>Enterpise Plan - </span>$599.00 /
-              Yearly
-            </Text>
-
-            <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
-              Unlimited access with priority support, 99.95% uptime, powerfull
-              features and more...
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent={{ base: "none", md: "center" }}
-            my={{ base: 4, md: 0 }}
-            alignContent={"center"}
-          >
-            <ContainedButton title="View Plan" />
-          </Box>
-        </Box>
-        <Box
-          display={"flex"}
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
-          p={7}
-        >
-          <Text color="main" fontSize="14" fontWeight="400" mt={2}>
-            <span style={{ color: "#8094ae" }}> Learn more about our</span>{" "}
-            subscription options.
-          </Text>
-        </Box>
-      </Grid>
-     <Support/>
+      <EnterprisePlan data={enterprisePlanData} />
+      <Support />
     </Box>
   );
 };

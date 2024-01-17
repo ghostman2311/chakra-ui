@@ -1,23 +1,13 @@
-import {
-  Box,
-  Grid,
-  GridItem,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import Header from "./header";
 import SideBarMenu from "./sideBarMenu";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import SideDrawer from "./sideDrawer";
-import { ChevronUpIcon } from "@chakra-ui/icons";
-import { CiGlobe } from "react-icons/ci";
 import Footer from "./footer";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const [isScreenBelow991] = useMediaQuery("(max-width: 991px)");
   const [isScreenAbove992] = useMediaQuery("(min-width:992px)");
 
@@ -56,7 +46,7 @@ const Layout = ({ children }) => {
           </Box>
         </GridItem>
         <GridItem>
-          {children}
+          <Outlet />
           <Footer />
         </GridItem>
       </Grid>

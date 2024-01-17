@@ -9,9 +9,27 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { InfoOutlineIcon } from "@chakra-ui/icons";
-import Tabs from "./tabs";
+import SettingTabs from "./settingTabs";
+import Billing from "./billing";
 
 const AccountSetting = () => {
+  const tabs=[{
+    key:'personal',
+    value:'Personal',
+    component:<Billing/>
+  },{
+    key:'billing',
+    value:'Billing',
+    component:<Billing/>
+  },{
+    key:'settings',
+    value:'Settings',
+    component:<Billing/>
+  },{
+    key:'notifications',
+    value:'Notifications', 
+     component:<Billing/>
+  }]
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
       <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
@@ -36,8 +54,8 @@ const AccountSetting = () => {
           <Icon as={InfoOutlineIcon} boxSize={4} mr={2} color={"#798BFF"} />
         </Text>
       </Box>
-      <Box>
-        <Tabs/>
+      <Box mt={4}>
+        <SettingTabs tabs={tabs}/>
       </Box>
     </Box>
   );
