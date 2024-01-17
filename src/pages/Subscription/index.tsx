@@ -1,7 +1,6 @@
 import {
   Badge,
   Box,
-  Button,
   Grid,
   GridItem,
   Icon,
@@ -11,6 +10,9 @@ import {
 import { InfoOutlineIcon } from "@chakra-ui/icons";
 import Support from "../../components/Support";
 import { PlanHeader } from "./components/PlanHeader";
+import ContainedButton from "../../components/Button/Contained";
+import OutlineButton from "../../components/Button/Outlined";
+
 
 const Subscription = () => {
   return (
@@ -52,22 +54,7 @@ const Subscription = () => {
           justifyContent={{ base: "flex-start", md: "flex-end" }}
         >
           <Box>
-            <Button
-              colorScheme="blue"
-              bgColor={"#18212d"}
-              color={"#6576ff"}
-              borderColor={"#333f77"}
-              variant="outline"
-              fontSize={17}
-              sx={{
-                "&:hover": {
-                  bgColor: "#6576ff",
-                  color: "white",
-                },
-              }}
-            >
-              View Pricing
-            </Button>
+          <OutlineButton title="View Pricing"/>
           </Box>
         </GridItem>
       </Grid>
@@ -116,7 +103,7 @@ const Subscription = () => {
               alignContent={"center"}
               gap={2}
             >
-              <Switch sx={{ color: "#6576ff" }} size="lg" />
+              <Switch sx={{ color: "active" }} size="lg" />
               <Text color="#8094ae" fontSize="0.8rem" fontWeight="600">
                 Auto renew
               </Text>
@@ -174,20 +161,7 @@ const Subscription = () => {
           borderLeft={{ md: "1px solid #203247" }}
           borderTop={{ base: "1px solid #203247", md: "none" }}
         >
-          <Button
-            bgColor={"#6576ff"}
-            color={"white"}
-            borderColor={"#333f77"}
-            variant="outline"
-            fontSize={15}
-            sx={{
-              "&:hover": {
-                bgColor: "#6576ff",
-              },
-            }}
-          >
-            Change Plan
-          </Button>
+          <ContainedButton title="Change Plan"/>
           <Text
             color="#8094ae"
             fontSize="13"
@@ -244,7 +218,7 @@ const Subscription = () => {
               alignContent={"center"}
               gap={2}
             >
-              <Switch sx={{ color: "#6576ff" }} size="lg" />
+              <Switch sx={{ color: "active" }} size="lg" />
               <Text color="#8094ae" fontSize="0.8rem" fontWeight="600" mt={1}>
                 Auto renew
               </Text>
@@ -303,21 +277,9 @@ const Subscription = () => {
           borderLeft={{ md: "1px solid #203247" }}
           borderTop={{ base: "1px solid #203247", md: "none" }}
         >
-          <Button
-            bgColor={"#18212d"}
-            color={"#6576ff"}
-            borderColor={"#333f77"}
-            variant="outline"
-            fontSize={15}
-            sx={{
-              "&:hover": {
-                bgColor: "#6576ff",
-                color: "white",
-              },
-            }}
-          >
-            Renew Plan
-          </Button>
+
+          <OutlineButton title=' Renew Plan'/>
+           
           <Text
             color="#8094ae"
             fontSize="13"

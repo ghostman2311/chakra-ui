@@ -10,13 +10,13 @@ const OutlineButton = ({ fontSize, title, sx }: IOutlinedButton) => {
   return (
     <Button
       bgColor={"#18212d"}
-      color={"#6576ff"}
+      color={"active"}
       borderColor={"#333f77"}
       variant="outline"
       fontSize={fontSize ? fontSize : 15}
       sx={{
         "&:hover": {
-          bgColor: "#6576ff",
+          bgColor: "active",
           color: "white",
         },
         ...sx

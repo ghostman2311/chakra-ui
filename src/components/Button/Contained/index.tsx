@@ -9,13 +9,13 @@ interface IContainedButton {
 const ContainedButton = ({ fontSize, title, sx }: IContainedButton) => {
   return (
     <Button
-      bgColor={"#6576ff"}
+      bgColor={"active"}
       color={"white"}
       borderColor={"#333f77"}
       fontSize={fontSize ? fontSize : 15}
       sx={{
         "&:hover": {
-          bgColor: "#6576ff",
+          bgColor: "active",
         },
         ...sx,
       }}
