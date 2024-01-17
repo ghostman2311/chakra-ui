@@ -1,6 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
 import { MdOutlineDashboard } from "react-icons/md";
-import React from "react";
 
 interface ISideBarMenu {
   mt?: number;

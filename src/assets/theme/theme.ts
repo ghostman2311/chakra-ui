@@ -1,5 +1,6 @@
 import type { ThemeOverride } from "@chakra-ui/react";
 import { Colors } from "./colors";
+import { textTheme } from "../../components/Text/theme";
 
 
 export const customTheme: ThemeOverride = {
@@ -17,4 +18,7 @@ export const customTheme: ThemeOverride = {
     md: "4px",
     sm: "2px",
   },
+  components: {
+    Text: textTheme
+  }
 };

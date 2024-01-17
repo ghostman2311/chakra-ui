@@ -10,11 +10,15 @@ import Support from "../../components/Support";
 const Dashboard = () => {
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
-      <Box bg="#101924" color="#8094ae">
-        <Text fontSize={{base:'20',sm:"40"}} fontWeight="400" color={"white"}>
+      <Box bg="#101924">
+        <Text
+          fontSize={{ base: "20", sm: "40" }}
+          fontWeight="400"
+          color={"white"}
+        >
           Welcome, Abu Bin Ishtiyak
         </Text>
-        <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
+        <Text fontSize="1.4rem" fontWeight="400">
           Welcome to our dashboard. Manage your account and your subscriptions.
         </Text>
       </Box>
@@ -60,39 +64,6 @@ const Dashboard = () => {
           }
           linkText="Manage Subscription"
         />
-        {/* <GridItem
-          bgColor={"#1b2633"}
-          display="flex"
-          alignItems="center"
-          justifyContent={{ base: "space-between", md: "center" }}
-          flexDirection={{ md: "column" }}
-          gap={2}
-          p={{ base: 5, md: 16 }}
-        >
-          <Button
-            bgColor={"#6576ff"}
-            color={"white"}
-            borderColor={"#333f77"}
-            variant="outline"
-            fontSize={15}
-            sx={{
-              "&:hover": {
-                bgColor: "#6576ff",
-              },
-            }}
-          >
-            Change Plan
-          </Button>
-          <Text
-            color="#8094ae"
-            fontSize="13"
-            fontWeight="400"
-            textAlign={"center"}
-          >
-            Next Billing on{" "}
-            <span style={{ color: "#526484" }}>Oct 11, 2020</span>
-          </Text>
-        </GridItem> */}
       </Grid>
       {/* Enterprise plan*/}
       <Grid
@@ -142,7 +113,7 @@ const Dashboard = () => {
           </Text>
         </Box>
       </Grid>
-     <Support/>
+      <Support />
     </Box>
   );
 };
