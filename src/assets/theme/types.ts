@@ -1,0 +1,46 @@
+export type ThemeColors = {
+  base: Partial<PaletteSteps>;
+  baseAlpha: Partial<PaletteSteps>;
+  gold: Partial<PaletteSteps>;
+  goldAlpha: Partial<PaletteSteps>;
+  working: Partial<PaletteSteps>;
+  workingAlpha: Partial<PaletteSteps>;
+  warning: Partial<PaletteSteps>;
+  warningAlpha: Partial<PaletteSteps>;
+  ok: Partial<PaletteSteps>;
+  okAlpha: Partial<PaletteSteps>;
+  error: Partial<PaletteSteps>;
+  errorAlpha: Partial<PaletteSteps>;
+  yellow: Partial<PaletteSteps>;
+  yellowAlpha: Partial<PaletteSteps>;
+  red: Partial<PaletteSteps>;
+  redAlpha: Partial<PaletteSteps>;
+  green: Partial<PaletteSteps>;
+  greenAlpha: Partial<PaletteSteps>;
+  blue: Partial<PaletteSteps>;
+  blueAlpha: Partial<PaletteSteps>;
+};
+
+export type PaletteSteps = {
+  0: string;
+  50: string;
+  100: string;
+  150: string;
+  200: string;
+  250: string;
+  300: string;
+  350: string;
+  400: string;
+  450: string;
+  500: string;
+  550: string;
+  600: string;
+  650: string;
+  700: string;
+  750: string;
+  800: string;
+  850: string;
+  900: string;
+  950: string;
+  1000: string;
+};

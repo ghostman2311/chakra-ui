@@ -1,8 +1,7 @@
-import "./App.css";
-import { Layout } from "./components/layout";
-import { AccountSetting } from "./pages/AccountSetting";
-import Dashboard from "./pages/dashboard/dashboard";
-import Downloads from "./pages/downloads/downloads";
+import Layout from "./components/Layout";
+import AccountSetting from "./pages/AccountSetting";
+import Dashboard from "./pages/Dashboard";
+import Downloads from "./pages/Downloads";
 import Subscription from "./pages/Subscription";
 import { Route, Routes } from "react-router-dom";
 
@@ -13,7 +12,7 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path="downloads" element={<Downloads />} />
         <Route path="subscriptions" element={<Subscription />} />
-        <Route path="account-setting" element={<AccountSetting />} />
+        <Route path="settings" element={<AccountSetting />} />
       </Route>
     </Routes>
   );
