@@ -8,8 +8,8 @@ export const customTheme: ThemeOverride = {
     initialColorMode: "dark",
   },
   fonts: {
-    body: "'Inter Variable', sans-serif",
-    heading: "'Inter Variable', sans-serif",
+    body: "Nunito, sans-serif",
+    heading: "Nunito, sans-serif",
   },
   colors: Colors,
   radii: {
