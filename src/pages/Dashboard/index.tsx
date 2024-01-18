@@ -6,24 +6,16 @@ import Info from "../../assets/dashboard/info.svg";
 import DashboardBox from "./components/DashboardBox";
 import ContainedButton from "../../components/Button/Contained";
 import Support from "../../components/Support";
+import PaymentHistoryTable from "../../components/PaymentHistoryTable";
+import PageContainer from "../../components/PageContainer";
 
 const Dashboard = () => {
   return (
-    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
-      <Box bg="#101924">
-        <Text
-          fontSize={{ base: "20", sm: "40" }}
-          fontWeight="400"
-          color={"white"}
-        >
-          Welcome, Abu Bin Ishtiyak
-        </Text>
-        <Text fontSize="1.4rem" fontWeight="400">
-          Welcome to our dashboard. Manage your account and your subscriptions.
-        </Text>
-      </Box>
-
-      {/* boxes UI-start */}
+    <PageContainer
+      title="Welcome, Abu Bin Ishtiyak"
+      subTitle="Welcome to our dashboard. Manage your account and your subscriptions."
+    >
+ 
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={7}
@@ -113,8 +105,18 @@ const Dashboard = () => {
           </Text>
         </Box>
       </Grid>
+      <Grid
+        templateColumns={"1fr "}
+        mt={7}
+        overflow="hidden"
+        bgColor={"#18212d"}
+        borderRadius={10}
+        sx={{ border: "1px solid #203247" }}
+      >
+        <PaymentHistoryTable />
+      </Grid>
       <Support />
-    </Box>
+    </PageContainer>
   );
 };
 

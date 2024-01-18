@@ -1,59 +1,45 @@
-import {
-  Box,
-  Icon,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Icon, Text } from "@chakra-ui/react";
 import { InfoOutlineIcon } from "@chakra-ui/icons";
 import SettingTabs from "./components/SettingsTab";
 import Billing from "./components/Billing";
 import Notifications from "../NotificationSetting";
+import PersonalInformation from "../PersonalInformation";
+import PageContainer from "../../components/PageContainer";
 
 const AccountSetting = () => {
-  const tabs=[{
-    key:'personal',
-    value:'Personal',
-    component:<Billing/>
-  },{
-    key:'billing',
-    value:'Billing',
-    component:<Billing/>
-  },{
-    key:'settings',
-    value:'Settings',
-    component:<Billing/>
-  },{
-    key:'notifications',
-    value:'Notifications', 
-     component:<Notifications/>
-  }]
+  const tabs = [
+    {
+      key: "personal",
+      value: "Personal",
+      component: <PersonalInformation />,
+    },
+    {
+      key: "billing",
+      value: "Billing",
+      component: <Billing />,
+    },
+    {
+      key: "settings",
+      value: "Settings",
+      component: <Billing />,
+    },
+    {
+      key: "notifications",
+      value: "Notifications",
+      component: <Notifications />,
+    },
+  ];
   return (
-    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
-      <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
-        Account Setting
-      </Text>
-      <Box>
-        <Text
-          fontSize={{ base: "20", sm: "40" }}
-          fontWeight="400"
-          color={"white"}
-        >
-          My Profile
-        </Text>
-        <Text
-          color="#8094ae"
-          fontSize={{ md: 14, lg: "16" }}
-          fontWeight="400"
-          pr={1}
-          sx={{ textWrap: "no-wrap" }}
-        >
-          You have full control to manage your own account setting.
-          <Icon as={InfoOutlineIcon} boxSize={4} mr={2} color={"#798BFF"} />
-        </Text>
-      </Box>
+    <PageContainer
+      header="Account Setting"
+      title="My Profile"
+      subTitle="You have full control to manage your own account setting."
+      icon={true}
+    >
       <Box mt={4}>
-        <SettingTabs tabs={tabs}/>
+        <SettingTabs tabs={tabs} />
       </Box>
-    </Box>
+    </PageContainer>
   );
 };
 
