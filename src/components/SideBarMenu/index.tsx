@@ -80,7 +80,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
 
   return (
     <Box color={"#8094AE"} mt={mt ? mt : 2} pl={{ base: 0, md: 8, lg: 14 }}>
-      <Text fontSize={11} color="#B6C6E3" fontWeight={900}>
+      <Text fontSize={11} color="#B6C6E3" fontWeight={700}>
         MENU
       </Text>
       {menu.map((item, i) => {
@@ -91,13 +91,17 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
             _hover={{ color: "main" }}
           >
             <MdOutlineDashboard fontSize={25} />
-            <Text fontSize={15} fontWeight={900} sx={{ textWrap: "nowrap" }}>
+            <Text
+              fontSize={15}
+              fontWeight={700}
+              sx={{ textWrap: "nowrap", letterSpacing: ".01em" }}
+            >
               {item?.name}
             </Text>
           </Box>
         );
       })}
-      <Text fontSize={11} color="#B6C6E3" fontWeight={900} mt={14}>
+      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>
         SEE OTHERS
       </Text>
       {seeOthers.map((item, i) => {
@@ -114,7 +118,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
             )}
             <Text
               fontSize={!item?.icon ? 14 : 15}
-              fontWeight={item?.icon ? 900 : 400}
+              fontWeight={item?.icon ? 700 : 400}
               sx={{ textWrap: "nowrap" }}
             >
               {item?.name}
@@ -122,7 +126,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
           </Box>
         );
       })}
-      <Text fontSize={11} color="#B6C6E3" fontWeight={900} mt={14}>
+      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>
         RETURN TO
       </Text>
       {returnTo.map((item, i) => {
@@ -133,7 +137,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
             _hover={{ color: "main" }}
           >
             <MdOutlineDashboard fontSize={25} />
-            <Text fontSize={15} fontWeight={900}>
+            <Text fontSize={15} fontWeight={700}>
               {item?.name}
             </Text>
           </Box>
@@ -147,7 +151,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               sx={{ display: "flex", gap: 3, mt: 3, cursor: "pointer" }}
               _hover={{ color: "main" }}
             >
-              <Text fontSize={13} fontWeight={900}>
+              <Text fontSize={13} fontWeight={700}>
                 {item?.name}
               </Text>
             </Box>
