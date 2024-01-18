@@ -3,61 +3,19 @@ import {
   Box,
   Grid,
   GridItem,
-  Icon,
   Switch,
   Text,
 } from "@chakra-ui/react";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
 import Support from "../../components/Support";
-import { PlanHeader } from "./components/PlanHeader";
 import ContainedButton from "../../components/Button/Contained";
 import OutlineButton from "../../components/Button/Outlined";
+import PageContainer from "../../components/PageContainer";
+import { PlanHeader } from "./components/PlanHeader";
 
 
 const Subscription = () => {
   return (
-    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
-      <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
-        Manage Subscription
-      </Text>
-      <Grid
-        templateColumns={{ base: "1fr", md: "2fr 1fr" }}
-        gap={7}
-        bg="#101924"
-        color="#8094ae"
-      >
-        <GridItem>
-          <Box>
-            <Text
-              fontSize={{ base: "20", sm: "40" }}
-              fontWeight="400"
-              color={"white"}
-            >
-              My Subscriptions
-            </Text>
-            <Text
-              color="#8094ae"
-              fontSize={{ md: 14, lg: "16" }}
-              fontWeight="400"
-              pr={1}
-              sx={{ textWrap: "no-wrap" }}
-            >
-              Here is list of package/product that you have subscribed.
-              <Icon as={InfoOutlineIcon} boxSize={4} mr={2} color={"#798BFF"} />
-            </Text>
-          </Box>
-        </GridItem>
-
-        <GridItem
-          display="flex"
-          alignItems="center"
-          justifyContent={{ base: "flex-start", md: "flex-end" }}
-        >
-          <Box>
-          <OutlineButton title="View Pricing"/>
-          </Box>
-        </GridItem>
-      </Grid>
+  <PageContainer header='Manage Subscription' title='My Subscriptions' subTitle="Here is list of package/product that you have subscribed." icon={true} buttonText="View Pricing">
       {/* seond box */}
       <Grid
         templateColumns={{ base: "1fr", md: "3.5fr 1.5fr" }}
@@ -291,7 +249,7 @@ const Subscription = () => {
         </GridItem>
       </Grid>
       <Support />
-    </Box>
+      </PageContainer>
   );
 };
 
