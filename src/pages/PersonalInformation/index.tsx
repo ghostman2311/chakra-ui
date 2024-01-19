@@ -1,7 +1,7 @@
 import { Box, Grid, Text } from "@chakra-ui/layout";
-import PersonalBlock from "./components";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { formatPropertyName } from "../../helpers";
+import WrapperBlock from "./components";
 
 const PersonalInformation = () => {
   const personalInformation = {
@@ -12,7 +12,7 @@ const PersonalInformation = () => {
     address: "2337 Kildeer Drive,Kentucky Canada",
   };
   return (
-    <PersonalBlock
+    <WrapperBlock
       title="Personal Information"
       subTitle="Basic info, like your name and address, that you use on Nio Platform."
     >
@@ -53,7 +53,7 @@ const PersonalInformation = () => {
           )
         )}
       </Grid>
-    </PersonalBlock>
+    </WrapperBlock>
   );
 };
 

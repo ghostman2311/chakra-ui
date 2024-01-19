@@ -1,10 +1,10 @@
 import { Box, Icon, Text } from "@chakra-ui/react";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
 import SettingTabs from "./components/SettingsTab";
 import Billing from "./components/Billing";
 import Notifications from "../NotificationSetting";
 import PersonalInformation from "../PersonalInformation";
 import PageContainer from "../../components/PageContainer";
+import Setting from "../Settings";
 
 const AccountSetting = () => {
   const tabs = [
@@ -21,7 +21,7 @@ const AccountSetting = () => {
     {
       key: "settings",
       value: "Settings",
-      component: <Billing />,
+      component: <Setting />,
     },
     {
       key: "notifications",
