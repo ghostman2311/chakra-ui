@@ -7,6 +7,7 @@ import Pricing from "./pages/Pricing";
 import Subscription from "./pages/Subscription";
 import { Route, Routes } from "react-router-dom";
 import SubscriptionDetails from "./pages/SubscriptionDetails";
+import PaymentHistory from "./pages/PaymentHistory";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="notifications" element={<Notifications />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="subscriptions-detail" element={<SubscriptionDetails />} />
+        <Route path="payment" element={<PaymentHistory />} />
       </Route>
     </Routes>
   );

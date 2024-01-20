@@ -1,12 +1,14 @@
 import { Button, SystemStyleObject } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
 interface IOutlinedButton {
   fontSize?: string | number;
   title: string;
   sx?: SystemStyleObject;
+  icon?:ReactNode;
 }
 
-const OutlineButton = ({ fontSize, title, sx }: IOutlinedButton) => {
+const OutlineButton = ({ fontSize, title, sx ,icon}: IOutlinedButton) => {
   return (
     <Button
       bgColor={"#18212d"}
@@ -22,7 +24,7 @@ const OutlineButton = ({ fontSize, title, sx }: IOutlinedButton) => {
         ...sx
       }}
     >
-      {title}
+     {icon && icon} {title}
     </Button>
   );
 };

@@ -9,6 +9,7 @@ import {
 import { ReactNode } from "react";
 import ContainedButton from "../Button/Contained";
 import { Switch } from "@chakra-ui/switch";
+
 interface IPageContainer {
   header?: string;
   title: string;
@@ -18,6 +19,7 @@ interface IPageContainer {
   children: ReactNode;
   backIcon?:boolean;
   isSubscription?:boolean;
+  buttonIcon?:ReactNode;
 }
 
 const PageContainer = ({
@@ -27,7 +29,8 @@ const PageContainer = ({
   buttonText,
   icon,
   children,
-  backIcon,isSubscription
+  backIcon,isSubscription,
+  buttonIcon
 }: IPageContainer) => {
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
@@ -85,7 +88,7 @@ const PageContainer = ({
             justifyContent={{ base: "flex-start", md: "flex-end" }}
           >
             <Box>
-              <OutlineButton title={buttonText} />
+              <OutlineButton title={buttonText} icon={buttonIcon} />
             </Box>
           </GridItem>
         ) : null}
