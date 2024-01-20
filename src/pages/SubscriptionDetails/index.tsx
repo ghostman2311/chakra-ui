@@ -22,7 +22,7 @@ const SubscriptionDetails = () => {
         borderRadius={10}
         sx={{ border: "1px solid #203247" }}
       >
-        <PaymentHistoryTable />
+        {/* <PaymentHistoryTable /> */}
       </Grid>
     </PageContainer>
   );

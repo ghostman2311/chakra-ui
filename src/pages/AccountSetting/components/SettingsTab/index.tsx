@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { Tab, TabList, TabPanel, TabPanels, Tabs, useBreakpointValue } from "@chakra-ui/react";
 
 interface ItabsObject {
   key: string;
@@ -13,7 +13,6 @@ interface Itabs {
 
 const SettingTabs = ({ tabs }: Itabs) => {
   const [activeTab, setActiveTab] = useState(0);
-
   const handleTabChange = (index: number) => {
     setActiveTab(index);
   };
@@ -24,6 +23,7 @@ const SettingTabs = ({ tabs }: Itabs) => {
       color="#b6c6e3"
       variant="line"
       borderColor={"#203247"}
+   
     >
       <TabList>
         {tabs?.map((tab, i) => (

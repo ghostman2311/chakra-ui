@@ -1,4 +1,4 @@
-import { Box, Icon, Text } from "@chakra-ui/react";
+import { Box, Grid, Icon, Text } from "@chakra-ui/react";
 import SettingTabs from "./components/SettingsTab";
 import Billing from "./components/Billing";
 import Notifications from "../NotificationSetting";
@@ -36,8 +36,10 @@ const AccountSetting = () => {
       subTitle="You have full control to manage your own account setting."
       icon={true}
     >
-      <Box mt={4}>
+      <Box mt={4} >
+     
         <SettingTabs tabs={tabs} />
+        {/* </Grid> */}
       </Box>
     </PageContainer>
   );
