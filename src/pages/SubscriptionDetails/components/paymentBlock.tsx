@@ -9,7 +9,7 @@ import { BsWindowFullscreen } from "react-icons/bs";
 const PaymentBlock=()=> {
   return (
     <Grid
-        templateColumns={{ base: "1fr", xl: " 2.5fr 1fr" }}
+        templateColumns={{ base: "1fr", xl: " 3.5fr 1.5fr" }}
         gap={{base:0,xl:7}}
         bg="#101924"
         color="#8094ae"

@@ -2,8 +2,11 @@ import { Box, Grid, Text } from "@chakra-ui/layout";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { formatPropertyName } from "../../helpers";
 import WrapperBlock from "./components";
+import { useState } from "react";
+import { Modal } from "@chakra-ui/modal";
 
 const PersonalInformation = () => {
+  const [openModal, setOpenModal] = useState(false);
   const personalInformation = {
     name: "Abu Bin Ishtiyak",
     email: "info@softnio.com",
@@ -32,27 +35,32 @@ const PersonalInformation = () => {
               <Box
                 display={"flex"}
                 flexDirection={{ base: "column", md: "row" }}
-                justifyContent={{base:'none',sm:'space-between'}}
+                justifyContent={{ base: "none", sm: "space-between" }}
                 sx={{ width: "80%" }}
               >
-                <Box sx={{width:'50%'}}>
-                <Text fontSize="1rem" fontWeight="600" color={"#8094AE"}>
-                  {formatPropertyName(key)}
-                </Text>
+                <Box sx={{ width: "50%" }}>
+                  <Text fontSize="1rem" fontWeight="600" color={"#8094AE"}>
+                    {formatPropertyName(key)}
+                  </Text>
                 </Box>
-                <Box sx={{width:'50%'}}>
-                <Text fontSize="1rem" fontWeight="600" color={"#8094AE"}>
-                  {value?value:'Not Add yet'}
-                </Text>
+                <Box sx={{ width: "50%" }}>
+                  <Text fontSize="1rem" fontWeight="600" color={"#8094AE"}>
+                    {value ? value : "Not Add yet"}
+                  </Text>
                 </Box>
               </Box>
-              <Box sx={{ width: "20%",textAlign:'end' }}>
-                <ChevronRightIcon fontSize={20} color={"#8094AE"} />
+              <Box sx={{ width: "20%", textAlign: "end" }}>
+                <ChevronRightIcon
+                  fontSize={20}
+                  color={"#8094AE"}
+                  onClick={() => setOpenModal(true)}
+                />
               </Box>
             </Box>
           )
         )}
       </Grid>
+      {openModal && <Modal open={openModal}/>}
     </WrapperBlock>
   );
 };
