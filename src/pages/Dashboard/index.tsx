@@ -6,7 +6,6 @@ import Info from "../../assets/dashboard/info.svg";
 import DashboardBox from "./components/DashboardBox";
 import ContainedButton from "../../components/Button/Contained";
 import Support from "../../components/Support";
-import PaymentHistoryTable from "../../components/PaymentHistoryTable";
 import PageContainer from "../../components/PageContainer";
 
 const Dashboard = () => {
@@ -113,7 +112,7 @@ const Dashboard = () => {
         borderRadius={10}
         sx={{ border: "1px solid #203247" }}
       >
-        <PaymentHistoryTable />
+        {/* <PaymentHistoryTable /> */}
       </Grid>
       <Support />
     </PageContainer>

@@ -53,6 +53,13 @@ const Pricing = () => {
           buttonText="Select Plan"
         />
       </Grid>
+      <Grid
+        templateColumns={{ base: "1fr"}}
+   
+
+        color="#8094ae"
+        overflow="hidden"
+      >
       <TableContainer border= "1px solid #203247" borderRadius={5} mt={10}>
         <Table size="sm">
           <Thead backgroundColor={'#2b3c51'} borderBottom={"1px solid #203247"}>
@@ -94,6 +101,7 @@ const Pricing = () => {
           </Tbody>
         </Table>
       </TableContainer>
+      </Grid>
       <Support />
     </PageContainer>
   );

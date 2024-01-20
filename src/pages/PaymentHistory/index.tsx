@@ -10,7 +10,7 @@ import {
 import PageContainer from "../../components/PageContainer";
 import { FaFileInvoice } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
-import { Box } from "@chakra-ui/layout";
+import { Box, Grid } from "@chakra-ui/layout";
 
 const PaymentHistory = () => {
   const paymentHistoryColumnData = [
@@ -94,8 +94,16 @@ const PaymentHistory = () => {
       title="Payment History"
       subTitle="Here is your payment history of account."
       buttonText="Get Invoice"
-      buttonIcon={<FaFileInvoice style={{ marginRight: "10" }} />}
+      buttonIcon={<FaFileInvoice style={{ marginRight: "10" }} />
+    }
     >
+       <Grid
+        templateColumns={{ base: "1fr"}}
+   
+        bg="#101924"
+        color="#8094ae"
+        overflow="hidden"
+      >
       <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
         <Table variant="simple" backgroundColor={"#18212d"}>
           <Thead borderBottom={"1px solid #203247"}>
@@ -219,6 +227,7 @@ const PaymentHistory = () => {
           </Tbody>
         </Table>
       </TableContainer>
+      </Grid>
     </PageContainer>
   );
 };

@@ -1,11 +1,7 @@
 import { Icon } from "@chakra-ui/icon";
 import { Box, Grid, GridItem, Text } from "@chakra-ui/layout";
 import OutlineButton from "../Button/Outlined";
-import {
-  ArrowBackIcon,
-  CloseIcon,
-  InfoOutlineIcon,
-} from "@chakra-ui/icons";
+import { ArrowBackIcon, CloseIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import { ReactNode } from "react";
 import ContainedButton from "../Button/Contained";
 import { Switch } from "@chakra-ui/switch";
@@ -17,9 +13,9 @@ interface IPageContainer {
   buttonText?: string;
   icon?: boolean;
   children: ReactNode;
-  backIcon?:boolean;
-  isSubscription?:boolean;
-  buttonIcon?:ReactNode;
+  backIcon?: boolean;
+  isSubscription?: boolean;
+  buttonIcon?: ReactNode;
 }
 
 const PageContainer = ({
@@ -29,8 +25,9 @@ const PageContainer = ({
   buttonText,
   icon,
   children,
-  backIcon,isSubscription,
-  buttonIcon
+  backIcon,
+  isSubscription,
+  buttonIcon,
 }: IPageContainer) => {
   return (
     <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
@@ -43,7 +40,10 @@ const PageContainer = ({
         </Box>
       ) : null}
       <Grid
-        templateColumns={{ base: "1fr", md: buttonText ||isSubscription  ? "2fr 1fr" : "1fr" }}
+        templateColumns={{
+          base: "1fr",
+          md: buttonText || isSubscription ? "2fr 1fr" : "1fr",
+        }}
         gap={7}
         bg="#101924"
         color="#8094ae"
@@ -93,31 +93,43 @@ const PageContainer = ({
           </GridItem>
         ) : null}
 
-        {isSubscription? (<GridItem
+        {isSubscription ? (
+          <GridItem
             display="flex"
             alignItems="center"
             justifyContent={{ base: "flex-start", md: "flex-end" }}
           >
-            <Box display='flex' gap={6} alignItems={'center'}>
-            <Box
-              display={"flex"}
-              justifyContent={{ base: "none", md: "center" }}
-              my={{ base: 4, md: 0 }}
-              alignItems={'center'}
-              gap={2}
-            >
-              <Switch sx={{ color: "active" }} size="lg" isChecked={true}/>
-              <Text color="#8094ae" fontSize="1rem" fontWeight="600">
-                Auto renew
-              </Text>
+            <Box display="flex" gap={6} alignItems={"center"}>
+              <Box
+                display={"flex"}
+                justifyContent={{ base: "none", md: "center" }}
+                my={{ base: 4, md: 0 }}
+                alignItems={"center"}
+                gap={2}
+              >
+                <Switch sx={{ color: "active" }} size="lg" isChecked={true} />
+                <Text color="#8094ae" fontSize="1rem" fontWeight="600">
+                  Auto renew
+                </Text>
               </Box>
-              <ContainedButton title={'Cancel Subscrition'} bgColor="#3d2a32" color='red' fontSize={13} icon={<CloseIcon fontSize={10}/>}/>
+              <ContainedButton
+                title={"Cancel Subscrition"}
+                bgColor="#3d2a32"
+                color="red"
+                fontSize={13}
+                icon={<CloseIcon fontSize={10} />}
+              />
             </Box>
-          </GridItem>):null
-
-        }
+          </GridItem>
+        ) : null}
       </Grid>
-      {children}
+      <Grid
+        templateColumns={{
+          base: "1fr",
+        }}
+      >
+        <GridItem>{children}</GridItem>
+      </Grid>
     </Box>
   );
 };
