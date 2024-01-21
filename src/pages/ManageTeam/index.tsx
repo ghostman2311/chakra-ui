@@ -8,218 +8,182 @@ import {
     Tr,
   } from "@chakra-ui/table";
   import PageContainer from "../../components/PageContainer";
-  import { FaFileInvoice } from "react-icons/fa";
-  import { GoDotFill } from "react-icons/go";
-  import { Box } from "@chakra-ui/layout";
+  import { Box, Grid, Text } from "@chakra-ui/layout";
+import { Avatar } from "@chakra-ui/avatar";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { Select } from "@chakra-ui/select";
   
   const ManageTeam = () => {
-    const paymentHistoryColumnData = [
+    const manageTeamData = [
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Due",
+       name:'Abu Bin Ishityak',
+       email:'info@softnio.com',
+       permission:'Owner',
+       role:'All',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Joseph Figueroa',
+        email:'joseffig@gmail.com',
+        permission:'Member',
+        role:'',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Stephen Barber',
+        email:'stephenbarber@gmail.comr',
+        permission:'Member',
+        role:'',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Heriberto Patterson',
+        email:'heribertopetterson@gmail.com',
+        permission:'Member',
+        role:'',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Arturo Blain',
+        email:'arturoblain@gmail.com',
+        permission:'Member',
+        role:'',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Cancel",
+        name:'Joseph Figueroa',
+        email:'joseffig@gmail.com',
+        permission:'Admin',
+        role:'',
+      },
+
+      {
+        name:'Stephen Barber',
+        email:'stephenbarber@gmail.com',
+        permission:'Member',
+        role:'',
       },
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Heriberto Patterson',
+        email:'heribertopetterson@gmail.com',
+        permission:'Manager',
+        role:'',
       },
+
       {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
+        name:'Arturo Blain',
+        email:'arturoblain@gmail.com',
+        permission:'Member',
+        role:'',
       },
-      {
-        id: 4947,
-        billFor: "Enterprize Year Subscrition",
-        issueDate: "10-05-2019",
-        dueDate: "10-13-2019",
-        amount: "$599.00",
-        status: "Paid",
-      },
+
     ];
   
     return (
       <PageContainer
-        header="Account Billing"
-        title="Payment History"
-        subTitle="Here is your payment history of account."
-        buttonText="Get Invoice"
-        buttonIcon={<FaFileInvoice style={{ marginRight: "10" }} />}
+      header="Team Members"
+      title="Team Manage"
+      subTitle="You can add and remove team member as you want."
+      buttonText="Invite New Member"  
+    >
+       <Grid
+        templateColumns={{ base: "1fr"}}
+        bg="#101924"
+        color="#8094ae"
+        overflow="hidden"
       >
-        <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
-          <Table variant="simple" backgroundColor={"#18212d"}>
-            <Thead borderBottom={"1px solid #203247"}>
-              <Tr height={"40px"} border={"none"} display={"flex"}>
-                <Th border={"none"} width={"7%"}>
-                  #
-                </Th>
-                <Th
-                  border={"none"}
-                  width={"70%"}
-                  sx={{ display: "flex", justifyContent: "space-between" }}
-                  flexDirection={{ base: "column", md: "row" }}
-                >
-                  <Box w={{ base: "60%" }}>BILL FOR</Box>
-                  <Box
-                    display={"flex"}
-                    w={{ base: "40%" }}
-                    justifyContent={"space-between"}
+      <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
+        <Table variant="simple" backgroundColor={"#18212d"}>
+          <Thead borderBottom={"1px solid #203247"} bgColor={'#2B3C51'} >
+            <Tr height={"40px"} border={"none"} display={"flex"}>
+              <Th border={"none"} width={{base:'80%',md:"40%"}}  color='#B6C6E3'>
+              TEAM MEMBER
+              </Th>
+              <Th
+                border={"none"}
+                width={{base:'40%',md:"25%"}} 
+                color='#B6C6E3'
+                display={{base:'none',md:'inline-block'}}
+
+              >
+                	PERMISSION
+              </Th>
+              <Th
+                border={"none"}
+                width={"20%"}
+                color='#B6C6E3'
+                display={{base:'none',md:'inline-block'}}
+              >
+               	ROLE
+              </Th>
+              <Th
+                border={"none"}
+                width={{base:'20%',md:"15%"}} 
+              
+                color='#B6C6E3'
+              >
+               ACTION
+              </Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {manageTeamData?.map((item, i) => {
+              return (
+                <Tr border={"1px solid #203247"} display={"flex"} key={i}>
+                  <Td
+                   border={"none"}
+                   width={{base:'80%',md:"40%"}} 
+                   fontSize={'14px'}
+                   display={'flex'}
+                   gap={4}
+                   alignItems={'center'}
                   >
-                    <Box
-                      w={{ base: "50%" }}
-                      display={{ base: "none", md: "inline-block" }}
-                    >
-                      ISSUE DATE
-                    </Box>
-                    <Box
-                      w={{ base: "50%" }}
-                      display={{ base: "none", md: "inline-block" }}
-                    >
-                      DUE DATE
-                    </Box>
-                  </Box>
-                </Th>
-                <Th
-                  border={"none"}
-                  width={"23%"}
-                  sx={{ display: "flex", justifyContent: "space-between" }}
-                  flexDirection={{ base: "column", md: "row" }}
-                >
-                  <Box w={{ base: "50%" }}>TOTAL</Box>
-                  <Box
-                    w={{ base: "50%" }}
-                    display={{ base: "none", md: "inline-block" }}
+                   <Avatar name={item?.name} src='https://bit.ly/broken-link' />
+                   <Box>
+                    <Text color='white' fontWeight={600}>{item?.name}</Text>
+                    <Text fontSize={12} color='#8094AE'>{item?.email}</Text>
+                   </Box>
+                  </Td>
+                  <Td
+                    border={"none"}
+                    width={{base:'40%',md:"25%"}} 
+                    fontSize={14}
+                    color='#526484'
+                    display={{base:'none',md:'inline-block'}}
                   >
-                    STATUS
-                  </Box>
-                </Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              {paymentHistoryColumnData?.map((item, i) => {
-                return (
-                  <Tr border={"1px solid #203247"} display={"flex"} key={i}>
-                    <Td
-                      border={"none"}
-                      color={"active"}
-                      fontWeight={600}
-                      width={"7%"}
-                    >
-                      {item?.id}
-                    </Td>
-                    <Td
-                      border={"none"}
-                      color="#526484"
-                      width={"70%"}
-                      sx={{ display: "flex", justifyContent: "space-between" }}
-                      flexDirection={{ base: "column", md: "row" }}
-                    >
-                      <Box w={{ base: "60%" }}>{item?.billFor}</Box>
-                      <Box
-                        display={"flex"}
-                        mt={{ base: 2, md: 0 }}
-                        w={{ base: "40%" }}
-                        justifyContent={"space-between"}
-                      >
-                        <Box color={"#8094AE"} w={{ base: "50%" }}>
-                          {item?.issueDate}
-                        </Box>
-                        <Box color={"#8094AE"} w={{ base: "50%" }}>
-                          {item?.dueDate}
-                        </Box>
-                      </Box>
-                    </Td>
-                    <Td
-                      border={"none"}
-                      color={"#8094AE"}
-                      width={"23%"}
-                      sx={{ display: "flex", justifyContent: "space-between" }}
-                      flexDirection={{ base: "column", md: "row" }}
-                    >
-                      <Box color={"#B6C6E3"} w={{ base: "50%" }}>
-                        {item?.amount}
-                      </Box>
-                      <Box
-                        color={
-                          item.status === "Due"
-                            ? "#f4bd0e"
-                            : item?.status === "Cancel"
-                            ? "red"
-                            : "#1EE0AC"
-                        }
-                        display={"flex"}
-                        w={{ base: "50%" }}
-                        mt={{ base: 2, md: 0 }}
-                      >
-                        <GoDotFill
-                          color={
-                            item.status === "Due"
-                              ? "#f4bd0e"
-                              : item?.status === "Cancel"
-                              ? "red"
-                              : "#1EE0AC"
-                          }
-                        />
-                        {item?.status}
-                      </Box>
-                    </Td>
-                  </Tr>
-                );
-              })}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      </PageContainer>
+                   {item?.permission}
+                  </Td>
+                  <Td
+                border={"none"}
+                width={"20%"}
+                fontSize={14}
+                display={{base:'none',md:'inline-block'}}
+                  >
+                    {item?.role==='All'?item?.role:
+                    <Select  bg='none'  borderColor='#203247' fontSize={13}>
+                    <option value='option1'>Super Admin</option>
+                    <option value='option2'>Admin</option>
+                    <option value='option3'>Manager</option>
+                  </Select>
+                    }
+                  </Td>
+                  <Td
+                border={"none"}
+              
+                width={{base:'20%',md:"15%"}} 
+              
+                fontWeight={600}
+                display={'flex'}
+                gap={5}
+                  >
+          
+              <Text color='#798BFF'  fontSize={12} display={{base:'none',md:'inline-block'}}>Edit</Text>
+              <Text  color='#E85347' fontSize={12} display={{base:'none',md:'inline-block'}}>Remove</Text>
+             <Box display={{base:'inline-block',md:'none'}}> <BsThreeDotsVertical/></Box>
+                  </Td>
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
+      </Grid>
+    </PageContainer>  
     );
   };
   

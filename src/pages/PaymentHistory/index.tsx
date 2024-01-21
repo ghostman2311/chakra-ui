@@ -177,12 +177,13 @@ const PaymentHistory = () => {
                       display={"flex"}
                       mt={{ base: 2, md: 0 }}
                       w={{ base: "40%" }}
+                      gap={{base:4,md:0}}
                       justifyContent={"space-between"}
                     >
-                      <Box color={"#8094AE"} w={{ base: "50%" }}>
+                      <Box color={"#8094AE"} w={{ base: "50%" }} fontSize={13}>
                         {item?.issueDate}
                       </Box>
-                      <Box color={"#8094AE"} w={{ base: "50%" }}>
+                      <Box color={"#8094AE"} w={{ base: "50%" }} fontSize={13}>
                         {item?.dueDate}
                       </Box>
                     </Box>
