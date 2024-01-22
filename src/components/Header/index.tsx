@@ -1,4 +1,5 @@
 import {
+  ArrowForwardIcon,
   BellIcon,
   ChevronDownIcon,
   HamburgerIcon,
@@ -230,6 +231,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             bg="#101924"
             color={"#8094AE"}
             fontSize={13}
+            width={{ base: "40vh", md: "50vh" }}
             sx={{
               border: "1px solid #203247",
               borderTop: "4px solid #798BFF",
@@ -239,33 +241,17 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             <MenuItem
               bg="#101924"
               fontWeight={900}
-              _focus={{ outline: "none", border: "none", color: "main" }}
-              _hover={{ outline: "none", border: "none", color: "main" }}
+              // _focus={{ outline: "none", border: "none", color: "main" }}
+              // _hover={{ outline: "none", border: "none", color: "main" }}
               display={"flex"}
+              // borderBottom={'1px solid #e5e9f2'}
+              justifyContent={"space-between"}
               gap={2}
             >
               <Text color={"#B6C6E3"}>Notifications</Text>
-              <Text color={"#B6C6E3"}>Mark All as Read</Text>
-            </MenuItem>
-            <MenuItem
-              bg="#101924"
-              fontWeight={900}
-              display={"flex"}
-              gap={2}
-              _hover={{ outline: "none", border: "none", color: "main" }}
-              _focus={{ outline: "none", border: "none", color: "main" }}
-            >
-              <Icon as={MdSettings} /> <span>Account Setting</span>
-            </MenuItem>
-            <MenuItem
-              bg="#101924"
-              fontWeight={900}
-              display={"flex"}
-              gap={2}
-              _hover={{ outline: "none", border: "none", color: "main" }}
-              _focus={{ outline: "none", border: "none", color: "main" }}
-            >
-              <IoIosPulse /> <span>Login Activity</span>
+              <Text color={"active"} fontSize={13}>
+                Mark All as Read
+              </Text>
             </MenuItem>
             <MenuDivider />
             <MenuItem
@@ -273,10 +259,112 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
               fontWeight={900}
               display={"flex"}
               gap={2}
-              _hover={{ outline: "none", border: "none", color: "main" }}
-              _focus={{ outline: "none", border: "none", color: "main" }}
+              // borderBottom={'1px solid #e5e9f2'}
+              py={2}
+              // _hover={{ outline: "none", border: "none", color: "main" }}
+              // _focus={{ outline: "none", border: "none", color: "main" }}
             >
-              <PiSignOutBold /> <span>Sign out</span>
+              <Box>
+                <Box
+                  w={"35px"}
+                  h={"35px"}
+                  borderRadius={"40px"}
+                  bgColor={"#393828"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <ArrowForwardIcon color="#f4bd0e" />
+                </Box>
+              </Box>
+              <Box>
+                <Text color={"#B6C6E3"} fontSize={13}>
+                  Your Deposit Order is placed
+                </Text>
+                <Text color={"white"} fontSize={11}>
+                  2 hrs ago
+                </Text>
+              </Box>
+            </MenuItem>
+            <MenuDivider />
+            <MenuItem
+              bg="#101924"
+              fontWeight={900}
+              display={"flex"}
+              gap={2}
+              // borderBottom={'1px solid #e5e9f2'}
+              py={2}
+              // _hover={{ outline: "none", border: "none", color: "main" }}
+              // _focus={{ outline: "none", border: "none", color: "main" }}
+            >
+              <Box>
+                <Box
+                  w={"35px"}
+                  h={"35px"}
+                  borderRadius={"40px"}
+                  bgColor={"#393828"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <ArrowForwardIcon color="#f4bd0e" />
+                </Box>
+              </Box>
+              <Box>
+                <Text color={"#B6C6E3"} fontSize={13}>
+                  You have requested to Widthdrawl
+                </Text>
+                <Text color={"white"} fontSize={11}>
+                  2 hrs ago
+                </Text>
+              </Box>
+            </MenuItem>
+            <MenuDivider />
+            <MenuItem
+              bg="#101924"
+              fontWeight={900}
+              display={"flex"}
+              gap={2}
+              // borderBottom={'1px solid #e5e9f2'}
+              py={2}
+              // _hover={{ outline: "none", border: "none", color: "main" }}
+              // _focus={{ outline: "none", border: "none", color: "main" }}
+            >
+              <Box>
+                <Box
+                  w={"35px"}
+                  h={"35px"}
+                  borderRadius={"40px"}
+                  bgColor={"#393828"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <ArrowForwardIcon color="#f4bd0e" />
+                </Box>
+              </Box>
+              <Box>
+                <Text color={"#B6C6E3"} fontSize={13}>
+                  You have requested to Widthdrawl
+                </Text>
+                <Text color={"white"} fontSize={11}>
+                  2 hrs ago
+                </Text>
+              </Box>
+            </MenuItem>
+            <MenuDivider />
+            <MenuItem
+              bg="#101924"
+              fontWeight={900}
+              display={"flex"}
+              gap={2}
+              // borderBottom={'1px solid #e5e9f2'}
+              py={4}
+              justifyContent={"center"}
+              // _hover={{ outline: "none", border: "none", color: "main" }}
+              // _focus={{ outline: "none", border: "none", color: "main" }}
+            >
+              <Text color="active"> View All</Text>
             </MenuItem>
           </MenuList>
         </Menu>
