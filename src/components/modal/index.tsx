@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/button";
 import {
   Modal,
   ModalBody,
@@ -8,31 +7,39 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/modal";
+
+import { ReactNode } from "react";
 interface IModal {
   open: boolean;
   onClose: () => void;
+  title?: string;
+  footer?:ReactNode;
+  children?:ReactNode;
 }
-const CommonModal = ({ open, onClose }: IModal) => {
+const CommonModal = ({ open, onClose, title,footer,children }: IModal) => {
+  console.log("open", open);
   return (
-    <>
-      {/* <Button onClick={onOpen}>Open Modal</Button> */}
-
-      <Modal isOpen={open} onClose={onClose}>
+      <Modal isOpen={open} onClose={onClose} size={"2xl"} isCentered={true}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>ndfnjdjfh</ModalBody>
+        <ModalContent sx={{ backgroundColor: "#101924", color: "white" }}>
+          <ModalHeader>{title}</ModalHeader>
+          <ModalCloseButton color="white" />
+          <ModalBody py={7} pt={12} pb={2} mx={5} >
+           {children}
+          </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
+          <ModalFooter
+            width={"100%"}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"start"}
+            mx={5}
+            pb={12}
+          >
+            {footer?footer:null}
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
   );
 };
 

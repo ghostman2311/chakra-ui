@@ -9,9 +9,10 @@ interface IContainedButton {
   color?:string;
   icon?:ReactNode;
   backIcon?:ReactNode;
+  onClick?:()=>void;
 }
 
-const ContainedButton = ({ fontSize, title, sx,bgColor,color,icon,backIcon }: IContainedButton) => {
+const ContainedButton = ({ fontSize, title, sx,bgColor,color,icon,backIcon ,onClick}: IContainedButton) => {
   return (
     <Button
       bgColor={bgColor?bgColor:"active"}
@@ -24,6 +25,7 @@ const ContainedButton = ({ fontSize, title, sx,bgColor,color,icon,backIcon }: IC
         },
         ...sx,
       }}
+      onClick={onClick}
       display={'flex'}
       gap={icon?2:0}
     >
