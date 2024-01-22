@@ -8,11 +8,7 @@ import {
   Tr,
 } from "@chakra-ui/table";
 import PageContainer from "../../components/PageContainer";
-import { GoDotFill } from "react-icons/go";
 import { Badge, Box, Grid, Text } from "@chakra-ui/layout";
-import { FiDownloadCloud } from "react-icons/fi";
-import { FaPrint } from "react-icons/fa6";
-import OutlineButton from "../../components/Button/Outlined";
 import { FaRegUser } from "react-icons/fa6";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Avatar } from "@chakra-ui/avatar";
