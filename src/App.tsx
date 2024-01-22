@@ -10,6 +10,7 @@ import SubscriptionDetails from "./pages/SubscriptionDetails";
 import PaymentHistory from "./pages/PaymentHistory";
 import ManageTeam from "./pages/ManageTeam";
 import Invoices from "./pages/Invoices";
+import Tickets from "./pages/Tickets";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="payment" element={<PaymentHistory />} />
         <Route path="manage-team" element={<ManageTeam />} />
         <Route path="invoices" element={<Invoices />} />
+        <Route path='tickets' element={<Tickets/>}/>
       </Route>
     </Routes>
   );
