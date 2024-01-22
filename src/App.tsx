@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import SubscriptionDetails from "./pages/SubscriptionDetails";
 import PaymentHistory from "./pages/PaymentHistory";
 import ManageTeam from "./pages/ManageTeam";
+import Invoices from "./pages/Invoices";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="subscriptions-detail" element={<SubscriptionDetails />} />
         <Route path="payment" element={<PaymentHistory />} />
         <Route path="manage-team" element={<ManageTeam />} />
+        <Route path="invoices" element={<Invoices />} />
       </Route>
     </Routes>
   );
