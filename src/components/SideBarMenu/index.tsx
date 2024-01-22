@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import { MdOutlineDashboard } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 interface ISideBarMenu {
   mt?: number;
@@ -10,26 +11,32 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
     {
       icon: "",
       name: "Dashboard",
+      navigateTo:'/'
     },
     {
       icon: "",
       name: "My Subscription",
+      navigateTo:'subscriptions'
     },
     {
       icon: "",
       name: "Payment History",
+      navigateTo:'payment'
     },
     {
       icon: "",
       name: "Manage Team",
+      navigateTo:'manage-team'
     },
     {
       icon: "",
       name: "Download",
+      navigateTo:'downloads'
     },
     {
       icon: "",
       name: "Account Setting",
+      navigateTo:'settings'
     },
   ];
 
@@ -48,18 +55,23 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
     {
       icon: "here",
       name: "Pre-Built Pages",
+      navigateTo:'settings'
     },
     {
       name: "Pricing",
+      navigateTo:'pricing'
     },
     {
       name: "Invoices",
+      navigateTo:'invoices'
     },
     {
       name: "Tickets",
+      navigateTo:'tickets'
     },
     {
       name: "Subscription Details",
+      navigateTo:'subscriptions-detail'
     },
   ];
 
@@ -85,6 +97,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
       </Text>
       {menu.map((item, i) => {
         return (
+          <Link key={i} to={item.navigateTo || '/'}>
           <Box
             key={i}
             sx={{ display: "flex", gap: 3, mt: 5, cursor: "pointer" }}
@@ -99,6 +112,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               {item?.name}
             </Text>
           </Box>
+          </Link>
         );
       })}
       <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>
@@ -106,6 +120,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
       </Text>
       {seeOthers.map((item, i) => {
         return (
+          <Link key={i} to={item.navigateTo || '/'}>
           <Box
             key={i}
             sx={{ display: "flex", gap: 3, mt: 5, cursor: "pointer" }}
@@ -124,6 +139,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               {item?.name}
             </Text>
           </Box>
+          </Link>
         );
       })}
       <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>

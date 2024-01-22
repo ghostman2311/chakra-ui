@@ -7,8 +7,36 @@ import DashboardBox from "./components/DashboardBox";
 import ContainedButton from "../../components/Button/Contained";
 import Support from "../../components/Support";
 import PageContainer from "../../components/PageContainer";
+import PaymentHistoryTable from "../PaymentHistory/component";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const Dashboard = () => {
+  const paymentHistoryColumnData = [
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Due",
+    },
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Paid",
+    },
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Paid",
+    },
+  ];
   return (
     <PageContainer
       title="Welcome, Abu Bin Ishtiyak"
@@ -104,16 +132,12 @@ const Dashboard = () => {
           </Text>
         </Box>
       </Grid>
-      <Grid
-        templateColumns={"1fr "}
-        mt={7}
-        overflow="hidden"
-        bgColor={"#18212d"}
-        borderRadius={10}
-        sx={{ border: "1px solid #203247" }}
-      >
-        {/* <PaymentHistoryTable /> */}
-      </Grid>
+      
+       <PaymentHistoryTable data={paymentHistoryColumnData} title={'Payment History'} link={
+      <Box>
+      See All <ChevronRightIcon/>
+      </Box>} />
+   
       <Support />
     </PageContainer>
   );

@@ -1,9 +1,36 @@
-import { Grid } from "@chakra-ui/layout";
+import { Box, Grid } from "@chakra-ui/layout";
 import PageContainer from "../../components/PageContainer";
-import PaymentHistoryTable from "../../components/PaymentHistoryTable";
 import PaymentBlock from "./components/paymentBlock";
+import PaymentHistoryTable from "../PaymentHistory/component";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const SubscriptionDetails = () => {
+  const paymentHistoryColumnData = [
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Due",
+    },
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Paid",
+    },
+    {
+      id: 4947,
+      billFor: "Enterprize Year Subscrition",
+      issueDate: "10-05-2019",
+      dueDate: "10-13-2019",
+      amount: "$599.00",
+      status: "Paid",
+    },
+  ];
   return (
     <PageContainer
       backIcon={true}
@@ -14,16 +41,10 @@ const SubscriptionDetails = () => {
       isSubscription={true}
     >
       <PaymentBlock/>
-      <Grid
-        templateColumns={"1fr "}
-        mt={7}
-        overflow="hidden"
-        bgColor={"#18212d"}
-        borderRadius={10}
-        sx={{ border: "1px solid #203247" }}
-      >
-        {/* <PaymentHistoryTable /> */}
-      </Grid>
+      <PaymentHistoryTable data={paymentHistoryColumnData} title={'Payment History'} link={
+      <Box>
+      Download Statement
+      </Box>} />
     </PageContainer>
   );
 };
