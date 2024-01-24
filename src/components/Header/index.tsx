@@ -73,8 +73,8 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
         />
       </Box>
       <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
-      <Box onClick={toggleColorMode} mr={4}>
-       {colorMode === "light" ? <SunIcon color='white' fontSize={20}/>: <MoonIcon color='white'/>}
+      <Box onClick={toggleColorMode} mr={{base:1,md:4}}>
+       {colorMode === "light" ? <SunIcon color='white' fontSize={22}/>: <MoonIcon color='white'/>}
       </Box>
         <Menu>
           <MenuButton
@@ -103,7 +103,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                   key={i}
                   minWidth={"1rem"}
                   minH="30px"
-                  bg="#101924"
+                  bg="specificBackground"
                   borderTop={"1px solid #ecf2ff"}
                   borderRadius={0}
                   sx={{
@@ -169,7 +169,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             </Box>
           </MenuButton>
           <MenuList
-            bg="#101924"
+            bg="specificBackground"
             color={"#8094AE"}
             fontSize={13}
             sx={{
@@ -179,7 +179,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             }}
           >
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               _focus={{ outline: "none", border: "none", color: "main" }}
               _hover={{ outline: "none", border: "none", color: "main" }}
@@ -189,7 +189,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
               <CiUser fontSize={17} /> <span>View Profile</span>
             </MenuItem>
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -199,7 +199,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
               <Icon as={MdSettings} /> <span>Account Setting</span>
             </MenuItem>
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -210,7 +210,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             </MenuItem>
             <MenuDivider />
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -237,7 +237,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             <BellIcon fontSize={"20"} />
           </MenuButton>
           <MenuList
-            bg="#101924"
+            bg="specificBackground"
             color={"#8094AE"}
             fontSize={13}
             width={{ base: "40vh", md: "50vh" }}
@@ -248,7 +248,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             }}
           >
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               // _focus={{ outline: "none", border: "none", color: "main" }}
               // _hover={{ outline: "none", border: "none", color: "main" }}
@@ -264,7 +264,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             </MenuItem>
             <MenuDivider />
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -278,7 +278,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                   w={"35px"}
                   h={"35px"}
                   borderRadius={"40px"}
-                  bgColor={"#393828"}
+                  bgColor={"specificBackground"}
                   display={"flex"}
                   alignItems={"center"}
                   justifyContent={"center"}
@@ -287,17 +287,17 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                 </Box>
               </Box>
               <Box>
-                <Text color={"#B6C6E3"} fontSize={13}>
+                <Text color={"title"} fontSize={13}>
                   Your Deposit Order is placed
                 </Text>
-                <Text color={"white"} fontSize={11}>
+                <Text color={"heading"} fontSize={11}>
                   2 hrs ago
                 </Text>
               </Box>
             </MenuItem>
             <MenuDivider />
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -311,7 +311,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                   w={"35px"}
                   h={"35px"}
                   borderRadius={"40px"}
-                  bgColor={"#393828"}
+                  bgColor={"specificBackground"}
                   display={"flex"}
                   alignItems={"center"}
                   justifyContent={"center"}
@@ -320,17 +320,17 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                 </Box>
               </Box>
               <Box>
-                <Text color={"#B6C6E3"} fontSize={13}>
+                <Text color={"title"} fontSize={13}>
                   You have requested to Widthdrawl
                 </Text>
-                <Text color={"white"} fontSize={11}>
+                <Text color={"heading"} fontSize={11}>
                   2 hrs ago
                 </Text>
               </Box>
             </MenuItem>
             <MenuDivider />
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
@@ -344,7 +344,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                   w={"35px"}
                   h={"35px"}
                   borderRadius={"40px"}
-                  bgColor={"#393828"}
+                  bgColor={"specificBackground"}
                   display={"flex"}
                   alignItems={"center"}
                   justifyContent={"center"}
@@ -353,17 +353,17 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                 </Box>
               </Box>
               <Box>
-                <Text color={"#B6C6E3"} fontSize={13}>
+                <Text color={"title"} fontSize={13}>
                   You have requested to Widthdrawl
                 </Text>
-                <Text color={"white"} fontSize={11}>
+                <Text color={"heading"} fontSize={11}>
                   2 hrs ago
                 </Text>
               </Box>
             </MenuItem>
             <MenuDivider />
             <MenuItem
-              bg="#101924"
+              bg="specificBackground"
               fontWeight={900}
               display={"flex"}
               gap={2}
