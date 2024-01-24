@@ -36,9 +36,9 @@ const SettingTabs = ({ tabs }: Itabs) => {
               borderRadius: 0,
               borderBottom: "3px solid #798BFF",
               bgColor: "transparent",
-              color: "main",
+              color: "title",
             }}
-            _hover={{ outline: "none", color: "white", border: "none" }}
+            _hover={{ outline: "none", color: "title", border: "none" }}
             _selected={{
               outline: "none",
               border: "none",

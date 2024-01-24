@@ -10,7 +10,8 @@ interface IDashboardBox {
 const DashboardBox = ({ icon, title, subTitle, linkText }: IDashboardBox) => {
   return (
     <GridItem
-      bgColor={"#18212d"}
+      // bgColor={"#18212d"}
+      bg="specificBackground"
       borderRadius={10}
       sx={{ border: "1px solid #203247" }}
     >
@@ -25,7 +26,7 @@ const DashboardBox = ({ icon, title, subTitle, linkText }: IDashboardBox) => {
           <img src={icon} alt="Your SVG" height={100} width={100} />
         </Box>
         <Box>
-          <Text fontSize="18" fontWeight="600" color={"white"}>
+          <Text fontSize="18" fontWeight="600" color={"heading"}>
             {title}
           </Text>
           <Text color="#8094ae" fontSize="14" fontWeight="600" mt={2}>

@@ -83,13 +83,13 @@ import { Select } from "@chakra-ui/select";
     >
        <Grid
         templateColumns={{ base: "1fr"}}
-        bg="#101924"
+        bg="background"
         color="#8094ae"
         overflow="hidden"
       >
       <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
-        <Table variant="simple" backgroundColor={"#18212d"}>
-          <Thead borderBottom={"1px solid #203247"} bgColor={'#2B3C51'} >
+        <Table variant="simple" backgroundColor={"specificBackground"}>
+          <Thead borderBottom={"1px solid #203247"} bgColor={'header'} >
             <Tr height={"40px"} border={"none"} display={"flex"}>
               <Th border={"none"} width={{base:'80%',md:"40%"}}  color='#B6C6E3'>
               TEAM MEMBER
@@ -124,7 +124,7 @@ import { Select } from "@chakra-ui/select";
           <Tbody>
             {manageTeamData?.map((item, i) => {
               return (
-                <Tr border={"1px solid #203247"} display={"flex"} key={i}>
+                <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
                   <Td
                    border={"none"}
                    width={{base:'80%',md:"40%"}} 

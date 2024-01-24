@@ -30,7 +30,7 @@ const PageContainer = ({
   buttonIcon,
 }: IPageContainer) => {
   return (
-    <Box w="100%" bg="#101924" px={{ base: 4, md: 14 }} py={12} mt={50}>
+    <Box w="100%" bg="background" px={{ base: 4, md: 14 }} py={12} mt={50}>
       {header ? (
         <Box display={"flex"} gap={2} alignItems={"center"}>
           {backIcon ? <ArrowBackIcon color="#8094ae" fontSize={20} /> : null}
@@ -45,7 +45,7 @@ const PageContainer = ({
           md: buttonText || isSubscription ? "2fr 1fr" : "1fr",
         }}
         gap={7}
-        bg="#101924"
+        bg="background"
         color="#8094ae"
       >
         <GridItem>
@@ -54,7 +54,7 @@ const PageContainer = ({
               <Text
                 fontSize={{ base: "20", sm: "40" }}
                 fontWeight="400"
-                color={"white"}
+                color={"title"}
               >
                 {title}
               </Text>
@@ -114,7 +114,7 @@ const PageContainer = ({
               </Box>
               <ContainedButton
                 title={"Cancel Subscrition"}
-                bgColor="#3d2a32"
+                bgColor="cancelButton"
                 color="red"
                 fontSize={13}
                 icon={<CloseIcon fontSize={10} />}

@@ -21,7 +21,7 @@ const CommonModal = ({ open, onClose, title,footer,children }: IModal) => {
   return (
       <Modal isOpen={open} onClose={onClose} size={"2xl"} isCentered={true}>
         <ModalOverlay />
-        <ModalContent sx={{ backgroundColor: "#101924", color: "white" }}>
+        <ModalContent sx={{ backgroundColor: "specificBackground", color: "heading" }}>
           <ModalHeader>{title}</ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody py={7} pt={12} pb={2} mx={5} >

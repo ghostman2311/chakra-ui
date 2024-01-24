@@ -100,12 +100,12 @@ const Tickets = () => {
     >
       <Grid
         templateColumns={{ base: "1fr" }}
-        bg="#101924"
+        bg="background"
         color="#8094ae"
         overflow="hidden"
       >
         <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
-          <Table variant="simple" backgroundColor={"#18212d"}>
+          <Table variant="simple" backgroundColor={"specificBackground"}>
             <Thead borderBottom={"1px solid #203247"}>
               <Tr height={"40px"} border={"none"} display={"flex"}>
                 <Th
@@ -155,7 +155,7 @@ const Tickets = () => {
             <Tbody>
               {invoicesData?.map((item, i) => {
                 return (
-                  <Tr border={"1px solid #203247"} display={"flex"} key={i}>
+                  <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
                     <Td
                       border={"none"}
                       width={"40%"}
@@ -257,7 +257,7 @@ const Tickets = () => {
       <Grid
         templateColumns={{ base: "1fr" }}
         mt={6}
-        backgroundColor={"#18212d"}
+        backgroundColor={"specificBackground"}
         color="#8094ae"
         overflow="hidden"
         border="1px solid #798BFF"

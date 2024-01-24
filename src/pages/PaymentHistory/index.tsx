@@ -92,8 +92,7 @@ const PaymentHistory = () => {
     >
        <Grid
         templateColumns={{ base: "1fr"}}
-   
-        bg="#101924"
+        bg="background"
         color="#8094ae"
         overflow="hidden"
       >

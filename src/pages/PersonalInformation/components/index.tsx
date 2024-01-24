@@ -10,10 +10,10 @@ interface ICommonBillingBlock {
 
 const WrapperBlock = ({ title, subTitle, children,link }: ICommonBillingBlock) => {
   return (
-    <Box mt={9} color={"white"}>
+    <Box mt={9} color={"heading"}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box>
-          <Heading as="h4" size="md" sx={{ color: "white" }}>
+          <Heading as="h4" size="md">
             {title}
           </Heading>
           <Text

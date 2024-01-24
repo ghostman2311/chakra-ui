@@ -8,7 +8,7 @@ const Support = () => {
       templateColumns={"1fr"}
       mt={7}
       overflow="hidden"
-      bgColor={"#18212d"}
+      bgColor={"specificBackground"}
       borderRadius={10}
       sx={{ border: "1px solid #203247" }}
     >
@@ -29,7 +29,7 @@ const Support = () => {
         </Box>
 
         <Box w={{ base: "100%", md: "60%" }} my={{ base: 4, md: 0 }}>
-          <Text fontSize="1.2rem" fontWeight="600" color="white">
+          <Text fontSize="1.2rem" fontWeight="600" color="title">
             We’re here to help you!
           </Text>
 

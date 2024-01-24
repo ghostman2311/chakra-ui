@@ -19,7 +19,7 @@ const PlanBlock = ({
 }: IPlanBlock) => {
   return (
     <GridItem
-      bgColor={"#18212d"}
+      bgColor={"specificBackground"}
       borderRadius={4}
       sx={{ border: "1px solid #203247" }}
       py={4}
@@ -33,7 +33,7 @@ const PlanBlock = ({
         p={7}
       >
         <img src={img} alt="Your SVG" height={90} width={90} />
-        <Text fontSize="20" fontWeight="600" color={"white"}>
+        <Text fontSize="20" fontWeight="600" color={"title"}>
           {level}
         </Text>
         <Text
@@ -46,7 +46,7 @@ const PlanBlock = ({
         >
           {subTitle}
         </Text>
-        <Text fontSize="24" fontWeight="600" color={"white"}>
+        <Text fontSize="24" fontWeight="600" color={"title"}>
           {amount}
         </Text>
         <Text

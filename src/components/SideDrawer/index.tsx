@@ -26,7 +26,7 @@ const SideDrawer = ({
     >
       <DrawerContent
         sx={{
-          backgroundColor: "#101924",
+          backgroundColor: "background",
           border: "1px solid #203247",
           marginTop: "64px",
         }}

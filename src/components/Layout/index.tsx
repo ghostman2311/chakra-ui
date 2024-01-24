@@ -22,17 +22,17 @@ const Layout = () => {
     }
   }, [isScreenBelow991, isScreenAbove992]);
   return (
-    <Box w="100vw" bg="#101924">
+    <Box w="100vw" bg="background">
       <Header DrawerHandle={DrawerHandle} />
       <Grid
         templateColumns={{
           base: "1fr",
           md: !isScreenBelow991 ? "1fr 4fr" : "1fr",
         }}
-        bg="#101924"
+        bg="background"
       >
         <GridItem
-          bgColor={"#101924"}
+          bgColor={"background"}
           display={{ base: "none", md: "inline-block" }}
         >
           <Box

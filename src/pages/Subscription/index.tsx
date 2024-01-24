@@ -19,14 +19,14 @@ const Subscription = () => {
       {/* seond box */}
       <Grid
         templateColumns={{ base: "1fr", md: "3.5fr 1.5fr" }}
-        bg="#101924"
+        bg="specificBackground"
         color="#8094ae"
         mt={16}
         borderRadius={4}
         overflow="hidden"
         sx={{ border: "1px solid #203247" }}
       >
-        <GridItem py={{ base: 5, md: 10 }} bgColor={"#18212d"}>
+        <GridItem py={{ base: 5, md: 10 }} bgColor={"specificBackground"}>
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
@@ -109,7 +109,7 @@ const Subscription = () => {
           </Box>
         </GridItem>
         <GridItem
-          bgColor={"#1b2633"}
+          bgColor={"specificBackground"}
           display="flex"
           alignItems="center"
           justifyContent={{ base: "space-between", md: "center" }}
@@ -134,13 +134,13 @@ const Subscription = () => {
       {/* Third box */}
       <Grid
         templateColumns={{ base: "1fr", md: "3.5fr 1.5fr" }}
-        bg="#101924"
+        bg="specificBackground"
         color="#8094ae"
         borderRadius={4}
         overflow="hidden"
         sx={{ border: "1px solid #203247" }}
       >
-        <GridItem py={{ base: 5, md: 10 }} bgColor={"#18212d"}>
+        <GridItem py={{ base: 5, md: 10 }} bgColor={"specificBackground"}>
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
@@ -225,7 +225,7 @@ const Subscription = () => {
         </GridItem>
 
         <GridItem
-          bgColor={"#1b2633"}
+          bgColor={"specificBackground"}
           display="flex"
           alignItems="center"
           justifyContent={{ base: "space-between", md: "center" }}

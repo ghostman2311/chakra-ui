@@ -11,19 +11,19 @@ const PaymentBlock=()=> {
     <Grid
         templateColumns={{ base: "1fr", xl: " 3.5fr 1.5fr" }}
         gap={{base:0,xl:7}}
-        bg="#101924"
+        bg="background"
         color="#8094ae"
         mt={7}
         overflow="hidden"
       >
         <GridItem
-          bgColor={"#18212d"}
+          bgColor={"specificBackground"}
           borderRadius={4}
           sx={{ border: "1px solid #203247" }}
           py={4}
         >
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
-            <Text fontSize="1.2rem" fontWeight="600" color="white">
+            <Text fontSize="1.2rem" fontWeight="600" color="title">
               Plan Details
             </Text>
             <Box
@@ -77,7 +77,7 @@ const PaymentBlock=()=> {
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
-                <Text fontSize="1.2rem" fontWeight="600" color="white">
+                <Text fontSize="1.2rem" fontWeight="600" color="title">
                   Next Payment
                 </Text>
               </Box>
@@ -90,7 +90,7 @@ const PaymentBlock=()=> {
                 <Text fontSize={13} color="#F4BD0E" pr="4">
                   Due
                 </Text>
-                <Text fontSize="1.2rem" fontWeight="600" color="white">
+                <Text fontSize="1.2rem" fontWeight="600" color="title">
                   $599.00
                 </Text>
               </Box>
@@ -108,7 +108,7 @@ const PaymentBlock=()=> {
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
-                <Text fontSize="1.2rem" fontWeight="600" color="white">
+                <Text fontSize="1.2rem" fontWeight="600" color="title">
                   Last Payment
                 </Text>
               </Box>
@@ -121,7 +121,7 @@ const PaymentBlock=()=> {
                 <Text fontSize={13} color="#1EE0AC" pr="4">
                   Paid
                 </Text>
-                <Text fontSize="1.2rem" fontWeight="600" color="white">
+                <Text fontSize="1.2rem" fontWeight="600" color="title">
                   $599.00
                 </Text>
               </Box>
@@ -137,7 +137,7 @@ const PaymentBlock=()=> {
                   fontSize={20}
                   style={{ color: "#6576FF", marginRight: "10px" }}
                 />
-                <Text fontSize="1rem" fontWeight="600" color="white">
+                <Text fontSize="1rem" fontWeight="600" color="title">
                   Change Billing Method
                 </Text>
               </Box>
@@ -148,7 +148,7 @@ const PaymentBlock=()=> {
 
         {/* second block */}
         <GridItem
-          bgColor={"#18212d"}
+          bgColor={"specificBackground"}
           borderRadius={4}
           sx={{ border: "1px solid #203247" }}
           py={{ base: 9, sm: 1, xl: 9 }}
@@ -173,7 +173,7 @@ const PaymentBlock=()=> {
             mt={{ base: 7, sm: 0, xl: 7 }}
             w={{ base: "90%", sm: "40%", xl: "70%" }}
           >
-            <Text fontSize="1.2rem" fontWeight="600" color="white">
+            <Text fontSize="1.2rem" fontWeight="600" color="title">
               Maintainance Support
             </Text>
 

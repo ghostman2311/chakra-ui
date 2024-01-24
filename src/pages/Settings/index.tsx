@@ -100,7 +100,7 @@ const Setting = () => {
           templateColumns={"1fr "}
           mt={7}
           overflow="hidden"
-          bgColor={"#18212d"}
+          bgColor={"specificBackground"}
           borderRadius={10}
           sx={{ border: "1px solid #203247" }}
         >
@@ -112,7 +112,7 @@ const Setting = () => {
             borderBottom="1px solid #203247"
           >
             <Box>
-              <Text fontSize="1rem" fontWeight="600" color="white">
+              <Text fontSize="1rem" fontWeight="600" color="title">
                 Save my Activity Logs
               </Text>
 
@@ -131,7 +131,7 @@ const Setting = () => {
             p={7}
           >
             <Box>
-              <Text fontSize="1rem" fontWeight="600" color="white">
+              <Text fontSize="1rem" fontWeight="600" color="title">
                 Change Password
               </Text>
 
@@ -160,7 +160,7 @@ const Setting = () => {
           >
             <Box width={{ base: "100%", md: "80%" }}>
               <Box sx={{ display: "flex", gap: 3 }}>
-                <Text fontSize="1rem" fontWeight="600" color="white">
+                <Text fontSize="1rem" fontWeight="600" color="title">
                   2FA Authentication
                 </Text>
                 <Badge
@@ -201,12 +201,12 @@ const Setting = () => {
       >
         <Grid
           templateColumns={{ base: "1fr" }}
-          bg="#101924"
+          bg="background"
           color="#8094ae"
           overflow="hidden"
         >
           <TableContainer border="1px solid #203247" borderRadius={5} mt={5}>
-            <Table variant="simple" backgroundColor={"#18212d"}>
+            <Table variant="simple" backgroundColor={"specificBackground"}>
               <Thead borderBottom={"1px solid #203247"}>
                 <Tr height={"40px"} border={"none"} display={"flex"}>
                   <Th
@@ -243,7 +243,7 @@ const Setting = () => {
               <Tbody>
                 {recentActivity?.map((item, i) => {
                   return (
-                    <Tr border={"1px solid #203247"} display={"flex"} key={i}>
+                    <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
                       <Td
                         border={"none"}
                         width={{ base: "50%", md: "70%" }}

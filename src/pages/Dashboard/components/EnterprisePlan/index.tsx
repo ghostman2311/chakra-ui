@@ -16,7 +16,8 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
       templateColumns={"1fr "}
       mt={7}
       overflow="hidden"
-      bgColor={"#18212d"}
+      // bgColor={"#18212d"}
+      bgColor={"specificBackground"}
       borderRadius={10}
       sx={{ border: "1px solid #203247" }}
     >
@@ -28,8 +29,8 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
         p={7}
       >
         <Box>
-          <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
-            <span style={{ color: "white" }}>{data.plan} - </span>
+          <Text fontSize="1rem" fontWeight="600" color={"heading"}>
+            <span style={{ color: "title" }}>{data.plan} - </span>
             {data?.amount}
           </Text>
 

@@ -46,7 +46,8 @@ const Dashboard = () => {
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={7}
-        bg="#101924"
+        // bg="#101924"
+        bg="background"
         color="#8094ae"
         mt={7}
         overflow="hidden"
@@ -89,7 +90,8 @@ const Dashboard = () => {
         templateColumns={"1fr "}
         mt={7}
         overflow="hidden"
-        bgColor={"#18212d"}
+        // bgColor={"#18212d"}
+        bg="specificBackground"
         borderRadius={10}
         sx={{ border: "1px solid #203247" }}
       >
@@ -102,7 +104,7 @@ const Dashboard = () => {
         >
           <Box>
             <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
-              <span style={{ color: "white" }}>Enterpise Plan - </span>$599.00 /
+              <span style={{ color: "heading" }}>Enterpise Plan - </span>$599.00 /
               Yearly
             </Text>
 

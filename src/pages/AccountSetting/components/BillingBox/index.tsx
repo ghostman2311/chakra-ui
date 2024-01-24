@@ -24,27 +24,27 @@ const BillingBox = ({
       justifyContent={"space-between"}
       p={7}
       mt={5}
-      bgColor={"#18212d"}
+      bgColor={"specificBackground"}
       borderRadius={10}
       sx={{ border: "1px solid #203247" }}
     >
       <Box>
-        <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
-          <span style={{ color: "white" }}>{heading}</span>
+        <Text fontSize="1rem" fontWeight="600" color={"title"}>
+          <span style={{ color: "heading" }}>{heading}</span>
         </Text>
         <Box
           flexDirection={{ base: "column", md: "row" }}
           gap={{ base: 1, md: 4 }}
           sx={{ display: "flex", mt: 2 }}
         >
-          <Text fontSize={14} color={"#8094AE"}>
+          <Text fontSize={14} color={"title"}>
             {title1} :
             <span style={{ color: "#B6C6E3", fontWeight: 600 }}>
               {subTitle1}
             </span>
           </Text>
           {title2 ? (
-            <Text fontSize={14} color={"#8094AE"}>
+            <Text fontSize={14} color={"title"}>
              {title2}: {subTitle2}
             </Text>
           ) : null}

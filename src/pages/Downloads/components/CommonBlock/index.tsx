@@ -18,7 +18,7 @@ const CommonBlock = ({ item, key }: ICommonBlock) => {
       templateColumns={"1fr"}
       mt={7}
       overflow="hidden"
-      bgColor={"#18212d"}
+      bgColor={"specificBackground"}
       borderRadius={10}
       sx={{ border: "1px solid #203247" }}
     >
@@ -42,12 +42,12 @@ const CommonBlock = ({ item, key }: ICommonBlock) => {
 
           <Box w={{ base: "100%", sm: "93%" }} my={{ base: 4, md: 0 }}>
             <Box sx={{ display: "flex", gap: 3 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"white"}>
+              <Text fontSize="1rem" fontWeight="600" color={"heading"}>
                 {item?.title}
               </Text>
               <Badge
-                bgColor="#242E4D"
-                color="main"
+                bgColor="header"
+                color="active"
                 borderRadius={13}
                 display={"flex"}
                 px={2}

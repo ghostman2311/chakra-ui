@@ -4,9 +4,12 @@ import {
   ChevronDownIcon,
   HamburgerIcon,
   Icon,
+  MoonIcon,
+  SunIcon,
 } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Image,
   Menu,
   MenuButton,
@@ -14,6 +17,7 @@ import {
   MenuItem,
   MenuList,
   Text,
+  useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { CiUser } from "react-icons/ci";
@@ -23,6 +27,7 @@ import { PiSignOutBold } from "react-icons/pi";
 
 const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
   const [isScreenBelow991] = useMediaQuery("(max-width: 991px)");
+  const { colorMode, toggleColorMode } = useColorMode();
   const flagMenuData = [
     {
       key: "english",
@@ -59,6 +64,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
       top={0}
       zIndex={10}
     >
+    
       <Box>
         <img
           src="https://dashlite.net/demo4/images/logo2x.png"
@@ -67,6 +73,9 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
         />
       </Box>
       <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+      <Box onClick={toggleColorMode} mr={4}>
+       {colorMode === "light" ? <SunIcon color='white' fontSize={20}/>: <MoonIcon color='white'/>}
+      </Box>
         <Menu>
           <MenuButton
             display={{ base: "none", sm: "inline-block" }}

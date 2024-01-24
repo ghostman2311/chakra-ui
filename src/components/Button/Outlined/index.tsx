@@ -11,9 +11,9 @@ interface IOutlinedButton {
 const OutlineButton = ({ fontSize, title, sx ,icon}: IOutlinedButton) => {
   return (
     <Button
-      bgColor={"#18212d"}
+      bgColor={"background"}
       color={"active"}
-      borderColor={"#333f77"}
+      borderColor={"active"}
       variant="outline"
       fontSize={fontSize ? fontSize : 15}
       sx={{

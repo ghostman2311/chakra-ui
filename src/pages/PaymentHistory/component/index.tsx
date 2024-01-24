@@ -29,12 +29,12 @@ interface IPaymentHistoryColumnData{
 
 const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
   return (
-    <TableContainer border="1px solid #203247" borderRadius={5} mt={10} backgroundColor={"#18212d"}>
+    <TableContainer border="1px solid #203247" borderRadius={5} mt={10} backgroundColor={"specificBackground"}>
        { title?<Box display='flex' justifyContent={'space-between'} p={5}>
-            <Text color='white' fontSize={16}>{title}</Text>
+            <Text color='heading' fontSize={16}>{title}</Text>
             <Box color='active' fontSize={12}>{link}</Box>
         </Box>:null}
-    <Table variant="simple" backgroundColor={"#18212d"}>
+    <Table variant="simple" backgroundColor={"specificBackground"}>
       <Thead borderBottom={"1px solid #203247"}>
         <Tr height={"40px"} border={"none"} display={"flex"}>
           <Th border={"none"} width={"7%"}>
@@ -85,7 +85,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
       <Tbody>
         {data?.map((item, i) => {
           return (
-            <Tr border={"1px solid #203247"} display={"flex"} key={i}>
+            <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
               <Td
                 border={"none"}
                 color={"active"}

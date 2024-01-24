@@ -23,7 +23,7 @@ const Pricing = () => {
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
         gap={7}
-        bg="#101924"
+        bg="background"
         color="#8094ae"
         mt={7}
         overflow="hidden"
@@ -55,19 +55,17 @@ const Pricing = () => {
       </Grid>
       <Grid
         templateColumns={{ base: "1fr"}}
-   
-
         color="#8094ae"
         overflow="hidden"
       >
       <TableContainer border= "1px solid #203247" borderRadius={5} mt={10}>
         <Table size="sm">
-          <Thead backgroundColor={'#2b3c51'} borderBottom={"1px solid #203247"}>
+          <Thead backgroundColor={'header'} borderBottom={"1px solid #203247"}>
             <Tr border={'none'} height={39}>
-              <Th  border={'none'} color={'white'} width={'56%'}>FEATURES</Th>
-              <Th  border={'none'} color={'white'}>STARTER</Th>
-              <Th  border={'none'} color={'white'}>PRO</Th>
-              <Th  border={'none'} color={'white'}>ENTERPRISE</Th>
+              <Th  border={'none'} color={'heading'} width={'56%'}>FEATURES</Th>
+              <Th  border={'none'} color={'heading'}>STARTER</Th>
+              <Th  border={'none'} color={'heading'}>PRO</Th>
+              <Th  border={'none'} color={'heading'}>ENTERPRISE</Th>
             </Tr>
           </Thead>
           <Tbody  border={'none'} py={6}>
