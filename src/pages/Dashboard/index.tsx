@@ -103,9 +103,9 @@ const Dashboard = () => {
           p={7}
         >
           <Box>
-            <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
-              <span style={{ color: "heading" }}>Enterpise Plan - </span>$599.00 /
-              Yearly
+            <Text fontSize="1rem" fontWeight="600" color={"title"}>
+             Enterpise Plan - <span style={{color:"heading"}}>$599.00 /
+              Yearly </span> 
             </Text>
 
             <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>

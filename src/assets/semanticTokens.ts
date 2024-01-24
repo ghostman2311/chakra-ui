@@ -65,6 +65,11 @@ const semanticTokens = {
     cancelButton:{
         _light: "#fceceb",
         _dark: '#3d2a32',
+    },
+    border:{
+        _light: "rgba(0, 0, 0, 0.125)",
+        _dark: '#203247',
+       
     }
   },
 };
