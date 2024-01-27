@@ -13,7 +13,7 @@ const DashboardBox = ({ icon, title, subTitle, linkText }: IDashboardBox) => {
       // bgColor={"#18212d"}
       bg="specificBackground"
       borderRadius={10}
-      sx={{ border: "1px solid #203247" }}
+      sx={{ border: "1px", borderColor: "borderColor" }}
     >
       <Box
         display={"flex"}
@@ -26,7 +26,7 @@ const DashboardBox = ({ icon, title, subTitle, linkText }: IDashboardBox) => {
           <img src={icon} alt="Your SVG" height={100} width={100} />
         </Box>
         <Box>
-          <Heading as='h5' fontSize="20" fontWeight="700" color={"title"}>
+          <Heading as="h5" fontSize="20" fontWeight="700" color={"title"}>
             {title}
           </Heading>
           <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
@@ -36,7 +36,8 @@ const DashboardBox = ({ icon, title, subTitle, linkText }: IDashboardBox) => {
       </Box>
       <Box
         sx={{
-          borderTop: "1px solid #203247",
+          borderTop: "1px",
+          borderColor: "borderColor",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

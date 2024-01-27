@@ -20,8 +20,8 @@ const PlanBlock = ({
   return (
     <GridItem
       bgColor={"specificBackground"}
+      sx={{ border: "1px", borderColor: "borderColor" }}
       borderRadius={4}
-      sx={{ border: "1px solid #203247" }}
       py={4}
     >
       <Box

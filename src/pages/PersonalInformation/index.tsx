@@ -36,7 +36,7 @@ const PersonalInformation = () => {
         title="Personal Information"
         subTitle="Basic info, like your name and address, that you use on Nio Platform."
       >
-        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10} border='1px solid #203247'>
+        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}     sx={{ border: "1px", borderColor: "borderColor" }}>
           {Object.entries(personalInformation).map(
             ([key, value], index, array) => (
               <Box
@@ -44,10 +44,8 @@ const PersonalInformation = () => {
                 display={"flex"}
                 justifyContent={"space-between"}
                 p={7}
-                sx={{
-                  borderBottom:
-                    index === array.length - 1 ? "none" : "1px solid #203247",
-                }}
+                sx={{ borderBottom: index === array.length - 1 ? "none" : "1px", borderColor: "borderColor" }}
+               
               >
                 <Box
                   display={"flex"}
@@ -94,7 +92,9 @@ const PersonalInformation = () => {
             <Text fontSize={20}  color='heading' mb={4}>
               Update Profile
             </Text>
-            <Tabs color="#b6c6e3" variant="line" borderColor={"#203247"}>
+            <Tabs color="#b6c6e3" variant="line" 
+             sx={{ border: "1px", borderColor: "borderColor" }}>
+          
               <TabList>
                 <Tab
                   textAlign={"start"}
@@ -216,7 +216,7 @@ const PersonalInformation = () => {
         title="Personal Preferences"
         subTitle="Your personalized preference allows you best use."
       >
-        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10} border='1px solid #203247'>
+        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}  sx={{ border: "1px", borderColor: "borderColor" }}>
           {Object.entries(personalPreference).map(
             ([key, value], index, array) => (
               <Box

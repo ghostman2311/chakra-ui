@@ -1,7 +1,7 @@
 import { memo, ReactNode } from "react";
 import { useMemo } from "react";
 import { customTheme } from "./assets/theme/theme.ts";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, useColorMode } from "@chakra-ui/react";
 
 type ThemeLocaleProviderProps = {
   children: ReactNode;
@@ -11,6 +11,9 @@ type ThemeLocaleProviderProps = {
 const ThemeProvider = ({ children }: ThemeLocaleProviderProps) => {
   const theme = useMemo(() => {
     return extendTheme({
+      borders: {
+        "1px": `1px solid`,
+      },
       ...customTheme,
     });
   }, []);

@@ -43,17 +43,17 @@ const Setting = () => {
           overflow="hidden"
           bgColor={"specificBackground"}
           borderRadius={10}
-          sx={{ border: "1px solid #203247" }}
+          sx={{ border: "1px", borderColor: "borderColor" }}
         >
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
             justifyContent={"space-between"}
             p={7}
-            borderBottom="1px solid #203247"
+            sx={{ borderBottom: "1px", borderColor: "borderColor" }}
           >
             <Box>
-              <Heading as='h6' fontSize="1rem" fontWeight="600" color="title">
+              <Heading as="h6" fontSize="1rem" fontWeight="600" color="title">
                 Save my Activity Logs
               </Heading>
 
@@ -68,11 +68,11 @@ const Setting = () => {
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
             justifyContent={"space-between"}
-            borderBottom="1px solid #203247"
+            sx={{ borderBottom: "1px", borderColor: "borderColor" }}
             p={7}
           >
             <Box>
-            <Heading as='h6' fontSize={'16'} fontWeight="600" color="title">
+              <Heading as="h6" fontSize={"16"} fontWeight="600" color="title">
                 Change Password
               </Heading>
 
@@ -101,7 +101,7 @@ const Setting = () => {
           >
             <Box width={{ base: "100%", md: "80%" }}>
               <Box sx={{ display: "flex", gap: 3 }}>
-                <Heading  as='h6' fontSize='16' fontWeight="600" color="title">
+                <Heading as="h6" fontSize="16" fontWeight="600" color="title">
                   2FA Authentication
                 </Heading>
                 <Badge
@@ -130,7 +130,7 @@ const Setting = () => {
               alignItems={"center"}
               gap={4}
             >
-              <ContainedButton title="Disable" fontSize={13}/>
+              <ContainedButton title="Disable" fontSize={13} />
             </Box>
           </Box>
         </Grid>
@@ -146,9 +146,13 @@ const Setting = () => {
           color="#8094ae"
           overflow="hidden"
         >
-          <TableContainer border="1px solid #203247" borderRadius={5} mt={5}>
+          <TableContainer
+            sx={{ border: "1px", borderColor: "borderColor" }}
+            borderRadius={5}
+            mt={5}
+          >
             <Table variant="simple" backgroundColor={"specificBackground"}>
-              <Thead borderBottom={"1px solid #203247"}>
+              <Thead sx={{ borderBottom: "1px", borderColor: "borderColor" }}>
                 <Tr height={"40px"} border={"none"} display={"flex"}>
                   <Th
                     border={"none"}
@@ -184,7 +188,11 @@ const Setting = () => {
               <Tbody>
                 {recentActivity?.map((item, i) => {
                   return (
-                    <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
+                    <Tr
+                      sx={{ borderBottom: "1px", borderColor: "borderColor" }}
+                      display={"flex"}
+                      key={i}
+                    >
                       <Td
                         border={"none"}
                         width={{ base: "50%", md: "70%" }}

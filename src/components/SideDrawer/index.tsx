@@ -1,8 +1,4 @@
-import {
-  Drawer,
-  DrawerBody,
-  DrawerContent,
-} from "@chakra-ui/react";
+import { Drawer, DrawerBody, DrawerContent } from "@chakra-ui/react";
 import React from "react";
 import SideBarMenu from "../SideBarMenu";
 
@@ -22,12 +18,13 @@ const SideDrawer = ({
       placement="left"
       onClose={onClose}
       finalFocusRef={btnRef}
-      size={{base:'xs'}}
+      size={{ base: "xs" }}
     >
       <DrawerContent
         sx={{
           backgroundColor: "background",
-          border: "1px solid #203247",
+          border: "1px",
+          borderColor: "borderColor",
           marginTop: "64px",
         }}
       >

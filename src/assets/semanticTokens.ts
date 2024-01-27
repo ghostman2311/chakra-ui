@@ -55,6 +55,10 @@ const semanticTokens = {
       _light: "white",
       _dark: "#18212d",
     },
+    changePlanBackground:{
+        _light: "#F5F6FA",
+        _dark: "#1b2633",
+    },
     link: {
       _light: "link",
       _dark: "link",
@@ -67,8 +71,9 @@ const semanticTokens = {
       _light: "#fceceb",
       _dark: "#3d2a32",
     },
-    border: {
-      _light: "rgba(0, 0, 0, 0.125)",
+    borderColor: {
+
+      _light: "#dbdfea",
       _dark: "#203247",
     },
     tdFontColor:{

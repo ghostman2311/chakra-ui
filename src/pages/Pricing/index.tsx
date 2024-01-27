@@ -53,52 +53,115 @@ const Pricing = () => {
           buttonText="Select Plan"
         />
       </Grid>
-      <Grid
-        templateColumns={{ base: "1fr"}}
-        color="#8094ae"
-        overflow="hidden"
-      >
-      <TableContainer border= "1px solid #203247" borderRadius={5} mt={10}>
-        <Table size="sm">
-          <Thead backgroundColor={'header'} borderBottom={"1px solid #203247"}>
-            <Tr border={'none'} height={39}>
-              <Th  border={'none'} color={'heading'} width={'56%'}>FEATURES</Th>
-              <Th  border={'none'} color={'heading'}>STARTER</Th>
-              <Th  border={'none'} color={'heading'}>PRO</Th>
-              <Th  border={'none'} color={'heading'}>ENTERPRISE</Th>
-            </Tr>
-          </Thead>
-          <Tbody  border={'none'} py={6}>
-            <Tr  border={'none'} height={37}>
-              <Td  border={'none'} color={'#526484'} fontSize={14} fontWeight={600} width={'60%'}>Alias record</Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-            </Tr>
-    
-            <Tr  border={'none'} height={37}>
-              <Td  border={'none'} color={'#526484'} fontSize={14} fontWeight={600}>Anycast DNS</Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-            </Tr>
-      
-            <Tr  border={'none'} height={37}>
-              <Td  border={'none'} color={'#526484'} fontSize={14} fontWeight={600} >Full API access</Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-            </Tr>
-            <Tr  border={'none'} height={37}>
-              <Td border={'none'} color={'#526484'} fontSize={14} fontWeight={600}>Multiple-layered DoS defense</Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-              <Td  border={'none'} color='active'><CloseIcon/></Td>
-              <Td  border={'none'} color='active'><CheckIcon/></Td>
-            </Tr>
+      <Grid templateColumns={{ base: "1fr" }} color="#8094ae" overflow="hidden">
+        <TableContainer
+          sx={{ border: "1px", borderColor: "borderColor" }}
+          borderRadius={5}
+          mt={10}
+        >
+          <Table size="sm">
+            <Thead
+              backgroundColor={"header"}
+              sx={{ borderBottom: "1px", borderColor: "borderColor" }}
+            >
+              <Tr border={"none"} height={39}>
+                <Th border={"none"} color={"heading"} width={"56%"}>
+                  FEATURES
+                </Th>
+                <Th border={"none"} color={"heading"}>
+                  STARTER
+                </Th>
+                <Th border={"none"} color={"heading"}>
+                  PRO
+                </Th>
+                <Th border={"none"} color={"heading"}>
+                  ENTERPRISE
+                </Th>
+              </Tr>
+            </Thead>
+            <Tbody border={"none"} py={6}>
+              <Tr border={"none"} height={37}>
+                <Td
+                  border={"none"}
+                  color={"#526484"}
+                  fontSize={14}
+                  fontWeight={600}
+                  width={"60%"}
+                >
+                  Alias record
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+              </Tr>
 
-          </Tbody>
-        </Table>
-      </TableContainer>
+              <Tr border={"none"} height={37}>
+                <Td
+                  border={"none"}
+                  color={"#526484"}
+                  fontSize={14}
+                  fontWeight={600}
+                >
+                  Anycast DNS
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+              </Tr>
+
+              <Tr border={"none"} height={37}>
+                <Td
+                  border={"none"}
+                  color={"#526484"}
+                  fontSize={14}
+                  fontWeight={600}
+                >
+                  Full API access
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+              </Tr>
+              <Tr border={"none"} height={37}>
+                <Td
+                  border={"none"}
+                  color={"#526484"}
+                  fontSize={14}
+                  fontWeight={600}
+                >
+                  Multiple-layered DoS defense
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CloseIcon />
+                </Td>
+                <Td border={"none"} color="active">
+                  <CheckIcon />
+                </Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
       </Grid>
       <Support />
     </PageContainer>

@@ -10,7 +10,8 @@ const Support = () => {
       overflow="hidden"
       bgColor={"specificBackground"}
       borderRadius={10}
-      sx={{ border: "1px solid #203247" }}
+      sx={{ border: "1px",  borderColor:"borderColor"  }}
+    
     >
       <Box
         display={"flex"}

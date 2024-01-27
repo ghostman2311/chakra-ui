@@ -45,6 +45,7 @@ export const customTheme = {
     "8xl": "6rem",
     "9xl": "8rem",
   },
+
   components: {
     Table: {
       variants: {

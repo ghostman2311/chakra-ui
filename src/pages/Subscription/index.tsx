@@ -1,21 +1,19 @@
-import {
-  Badge,
-  Box,
-  Grid,
-  GridItem,
-  Switch,
-  Text,
-} from "@chakra-ui/react";
+import { Badge, Box, Grid, GridItem, Switch, Text } from "@chakra-ui/react";
 import Support from "../../components/Support";
 import ContainedButton from "../../components/Button/Contained";
 import OutlineButton from "../../components/Button/Outlined";
 import PageContainer from "../../components/PageContainer";
 import { PlanHeader } from "./components/PlanHeader";
 
-
 const Subscription = () => {
   return (
-  <PageContainer header='Manage Subscription' title='My Subscriptions' subTitle="Here is list of package/product that you have subscribed." icon={true} buttonText="View Pricing">
+    <PageContainer
+      header="Manage Subscription"
+      title="My Subscriptions"
+      subTitle="Here is list of package/product that you have subscribed."
+      icon={true}
+      buttonText="View Pricing"
+    >
       {/* seond box */}
       <Grid
         templateColumns={{ base: "1fr", md: "3.5fr 1.5fr" }}
@@ -24,19 +22,20 @@ const Subscription = () => {
         mt={16}
         borderRadius={4}
         overflow="hidden"
-        sx={{ border: "1px solid #203247" }}
+        sx={{ border: "1px", borderColor: "borderColor" }}
       >
         <GridItem py={{ base: 5, md: 10 }} bgColor={"specificBackground"}>
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
             justifyContent={"space-between"}
-            borderBottom={{ base: "2px solid white", md: "none" }}
+            borderBottom={{ base: "1px ", md: "none" }}
+            borderColor="borderColor"
             px={{ base: 7, md: 8 }}
           >
             <Box>
               <Box sx={{ display: "flex", gap: 3 }}>
-                <PlanHeader title='Enterprise Plan' />
+                <PlanHeader title="Enterprise Plan" />
                 <Badge
                   bgColor="#1ee0ac"
                   color="white"
@@ -109,17 +108,19 @@ const Subscription = () => {
           </Box>
         </GridItem>
         <GridItem
-          bgColor={"specificBackground"}
+          bgColor={"changePlanBackground"}
           display="flex"
           alignItems="center"
           justifyContent={{ base: "space-between", md: "center" }}
           flexDirection={{ md: "column" }}
           gap={2}
           p={{ base: 5, md: 16 }}
-          borderLeft={{ md: "1px solid #203247" }}
-          borderTop={{ base: "1px solid #203247", md: "none" }}
+          // borderLeft={{ md: "1px " }}
+          // borderTop={{ base: "1px ", md: "none" }}
+          // borderColor={'borderColor'}
+     
         >
-          <ContainedButton title="Change Plan" fontSize={13}/>
+          <ContainedButton title="Change Plan" fontSize={13} />
           <Text
             color="#8094ae"
             fontSize="13"
@@ -138,14 +139,15 @@ const Subscription = () => {
         color="#8094ae"
         borderRadius={4}
         overflow="hidden"
-        sx={{ border: "1px solid #203247" }}
+        sx={{ border: "1px", borderColor: "borderColor" }}
       >
         <GridItem py={{ base: 5, md: 10 }} bgColor={"specificBackground"}>
           <Box
             display={"flex"}
             flexDirection={{ base: "column", md: "row" }}
             justifyContent={"space-between"}
-            borderBottom={{ base: "2px solid white", md: "none" }}
+            borderBottom={{ base: "1px", md: "none" }}
+            borderColor="borderColor"
             px={{ base: 7, md: 8 }}
           >
             <Box>
@@ -225,19 +227,19 @@ const Subscription = () => {
         </GridItem>
 
         <GridItem
-          bgColor={"specificBackground"}
+          bgColor={"changePlanBackground"}
           display="flex"
           alignItems="center"
           justifyContent={{ base: "space-between", md: "center" }}
           flexDirection={{ md: "column" }}
           gap={2}
           p={{ base: 5, md: 16 }}
-          borderLeft={{ md: "1px solid #203247" }}
-          borderTop={{ base: "1px solid #203247", md: "none" }}
+          // borderLeft={{ md: "1px" }}
+           borderTop={{ base: "1px ", md: "none" }}
+          // borderColor="borderColor"
         >
+          <OutlineButton title=" Renew Plan" fontSize={13} />
 
-          <OutlineButton title=' Renew Plan' fontSize={13}/>
-           
           <Text
             color="#8094ae"
             fontSize="13"
@@ -249,7 +251,7 @@ const Subscription = () => {
         </GridItem>
       </Grid>
       <Support />
-      </PageContainer>
+    </PageContainer>
   );
 };
 

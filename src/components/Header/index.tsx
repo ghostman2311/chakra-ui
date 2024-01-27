@@ -27,7 +27,6 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
   const [isScreenBelow991] = useMediaQuery("(max-width: 991px)");
   const { colorMode, toggleColorMode } = useColorMode();
-  console.log(colorMode, "color------");
   const flagMenuData = [
     {
       key: "english",
@@ -57,8 +56,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
       opacity={1}
       px={{ base: 4, md: 8, xl: 28 }}
       py={2}
-
-      sx={{ borderBottom: colorMode ==='light'?"1px solid #e5e9f2" :"1px solid #203247"}}
+      sx={{ borderBottom: "1px",  borderColor:"borderColor"  }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}

@@ -105,9 +105,11 @@ const Tickets = () => {
         color="#8094ae"
         overflow="hidden"
       >
-        <TableContainer border="1px solid #203247" borderRadius={5} mt={10}>
+        <TableContainer  sx={{ border: "1px",  borderColor:"borderColor"  }} borderRadius={5} mt={10}>
           <Table variant="simple" backgroundColor={"specificBackground"}>
-            <Thead borderBottom={"1px solid #203247"}>
+            <Thead 
+            //  sx={{ borderBottom: "1px",  borderColor:"borderColor"  }}
+            >
               <Tr height={"40px"} border={"none"} display={"flex"}>
                 <Th
                   border={"none"}
@@ -156,7 +158,9 @@ const Tickets = () => {
             <Tbody>
               {invoicesData?.map((item, i) => {
                 return (
-                  <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
+                  <Tr 
+                  sx={{ borderTop: "1px",  borderColor:"borderColor"  }}
+                 display={"flex"} key={i}>
                     <Td
                       border={"none"}
                       width={"40%"}
@@ -242,6 +246,7 @@ const Tickets = () => {
                           item?.status === "Open" ? "#1ee0ac" : "#000"
                         }
                         textTransform='capitalize'
+                      
                         border={ item?.status === "Open" ? "1px solid #1ee0ac" : "1px solid #344357"}
                         color={item?.status === "Open" ?'#fff':'#e5e9f2'}
                       >
@@ -263,6 +268,7 @@ const Tickets = () => {
         color="#8094ae"
         overflow="hidden"
         border="1px solid #798BFF"
+        sx={{ border: "1px",  borderColor:"borderColor"  }}
         borderRadius={5}
         p={5}
       >

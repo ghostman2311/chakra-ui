@@ -2,7 +2,6 @@ import { Box, Grid } from "@chakra-ui/layout";
 import PageContainer from "../../components/PageContainer";
 import PaymentBlock from "./components/paymentBlock";
 import PaymentHistoryTable from "../PaymentHistory/component";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const SubscriptionDetails = () => {
   const paymentHistoryColumnData = [
