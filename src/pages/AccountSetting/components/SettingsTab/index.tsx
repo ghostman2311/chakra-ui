@@ -32,6 +32,7 @@ const SettingTabs = ({ tabs }: Itabs) => {
           marginRight={5}
           pb={4}
             key={i}
+            color='title'
             textAlign={"start"}
             _focus={{
               outline: "none",

@@ -13,7 +13,7 @@ const WrapperBlock = ({ title, subTitle, children,link }: ICommonBillingBlock) =
     <Box mt={5} color={"heading"}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box>
-          <Heading as="h4" size="md">
+          <Heading as="h4" size="md" color='title'>
             {title}
           </Heading>
           <Text
