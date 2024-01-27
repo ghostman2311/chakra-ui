@@ -1,6 +1,5 @@
 import {
   ArrowForwardIcon,
-  BellIcon,
   ChevronDownIcon,
   HamburgerIcon,
   Icon,

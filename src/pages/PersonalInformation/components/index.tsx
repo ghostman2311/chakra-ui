@@ -18,7 +18,7 @@ const WrapperBlock = ({ title, subTitle, children,link }: ICommonBillingBlock) =
           </Heading>
           <Text
             color="#8094ae"
-            fontSize={{ md: 14, lg: "16" }}
+            fontSize={14}
             fontWeight="400"
             pr={1}
             sx={{ textWrap: "no-wrap" }}
