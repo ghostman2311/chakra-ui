@@ -1,5 +1,3 @@
-import { colors } from "../assets/theme/colors";
-
 const semanticTokens = {
   primary: {
     base: { _light: "blue.500", _dark: "orange.500" },
@@ -37,40 +35,42 @@ const semanticTokens = {
     text: {
       _light: "base",
     },
-    title:{
-        _light: "#364A63",
-        _dark: "white",
+    title: {
+      _light: "#364A63",
+      _dark: "white",
     },
     heading: {
       _light: "heading",
       _dark: "white",
     },
-
+    headerBackground: {
+      _light: "rgba(var(--bs-white-rgb),var(--bs-bg-opacity))",
+      _dark: "#101924",
+    },
     background: {
       _light: "white",
-      _dark: "dark",
+      _dark: "#101924",
     },
-    specificBackground:{
-        _light: "white",
-        _dark: "#18212d",
+    specificBackground: {
+      _light: "white",
+      _dark: "#18212d",
     },
     link: {
       _light: "link",
       _dark: "link",
     },
-    header:{
-        _light: "#F5F6FA",
-        _dark: '#2B3C51',
+    header: {
+      _light: "#F5F6FA",
+      _dark: "#2B3C51",
     },
-    cancelButton:{
-        _light: "#fceceb",
-        _dark: '#3d2a32',
+    cancelButton: {
+      _light: "#fceceb",
+      _dark: "#3d2a32",
     },
-    border:{
-        _light: "rgba(0, 0, 0, 0.125)",
-        _dark: '#203247',
-       
-    }
+    border: {
+      _light: "rgba(0, 0, 0, 0.125)",
+      _dark: "#203247",
+    },
   },
 };
 

@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   Image,
   Menu,
   MenuButton,
@@ -20,14 +19,16 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { CiUser } from "react-icons/ci";
 import { MdSettings } from "react-icons/md";
 import { IoIosPulse } from "react-icons/io";
 import { PiSignOutBold } from "react-icons/pi";
+import { LuUser2 } from "react-icons/lu";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
   const [isScreenBelow991] = useMediaQuery("(max-width: 991px)");
   const { colorMode, toggleColorMode } = useColorMode();
+  console.log(colorMode, "color------");
   const flagMenuData = [
     {
       key: "english",
@@ -53,7 +54,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
   return (
     <Box
       w="100vw"
-      bg="#101924"
+      bg="headerBackground"
       px={{ base: 4, md: 14 }}
       py={2}
       sx={{ borderBottom: "1px solid #203247" }}
@@ -64,18 +65,29 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
       top={0}
       zIndex={10}
     >
-    
       <Box>
-        <img
-          src="https://dashlite.net/demo4/images/logo2x.png"
-          height={36}
-          width={117}
-        />
+        {colorMode === "dark" ? (
+          <img
+            src="https://dashlite.net/demo4/images/logo2x.png"
+            height={36}
+            width={117}
+          />
+        ) : (
+          <img
+            src="https://dashlite.net/demo4/images/logo-dark2x.png"
+            height={36}
+            width={117}
+          />
+        )}
       </Box>
       <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
-      <Box onClick={toggleColorMode} mr={{base:1,md:4}}>
-       {colorMode === "light" ? <SunIcon color='white' fontSize={22}/>: <MoonIcon color='white'/>}
-      </Box>
+        <Box onClick={toggleColorMode} mr={{ base: 1, md: 4 }}>
+          {colorMode === "light" ? (
+            <SunIcon fontSize={22} />
+          ) : (
+            <MoonIcon color="white" />
+          )}
+        </Box>
         <Menu>
           <MenuButton
             display={{ base: "none", sm: "inline-block" }}
@@ -157,11 +169,12 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
                   alignItems: "center",
                 }}
               >
-                <CiUser fontSize={20} />
+                <LuUser2 fontSize={12} />
               </div>
               <Text
                 display={{ base: "none", sm: "inline-block" }}
                 sx={{ fontWeight: 900 }}
+                color={"title"}
               >
                 {" "}
                 Abu Bin Ishityak <ChevronDownIcon />
@@ -186,7 +199,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
               display={"flex"}
               gap={2}
             >
-              <CiUser fontSize={17} /> <span>View Profile</span>
+              <LuUser2 fontSize={17} /> <span>View Profile</span>
             </MenuItem>
             <MenuItem
               bg="specificBackground"
@@ -234,7 +247,8 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             fontSize={12}
             _focus={{ outline: "none" }}
           >
-            <BellIcon fontSize={"20"} />
+            <IoMdNotificationsOutline fontSize={"25"} color='#8094ae'/>
+            {/* <BellIcon  /> */}
           </MenuButton>
           <MenuList
             bg="specificBackground"
@@ -378,7 +392,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
           </MenuList>
         </Menu>
         <HamburgerIcon
-          color={"white"}
+         color='#8094ae'
           fontSize={25}
           display={{
             base: "inline-block",

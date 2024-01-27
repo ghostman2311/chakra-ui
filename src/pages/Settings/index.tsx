@@ -11,68 +11,9 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/table";
-import { FaPrint } from "react-icons/fa";
-import OutlineButton from "../../components/Button/Outlined";
-import { ChevronRightIcon, SmallCloseIcon } from "@chakra-ui/icons";
-import { GoDotFill } from "react-icons/go";
+import { SmallCloseIcon } from "@chakra-ui/icons";
 
 const Setting = () => {
-  const invoicesData = [
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Complete",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Pending",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$200.00",
-      status: "Complete",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Complete",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$120.00",
-      status: "Cancelled",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Complete",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Complete",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$120.00",
-      status: "Cancelled",
-    },
-    {
-      id: "746F5K2",
-      dateTime: "23 Jan 2019, 10:45pm",
-      amount: "$2300.00",
-      status: "Complete",
-    },
-  ];
   const recentActivity = [
     {
       browser: "Chrome on Window",
