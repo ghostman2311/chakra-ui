@@ -30,7 +30,7 @@ const PageContainer = ({
   buttonIcon,
 }: IPageContainer) => {
   return (
-    <Box w="100%" bg="background" px={{ base: 4, md: 14 }} py={12} mt={50}>
+    <Box w="100%" bg="background" px={{ base: 4,md:20, xl: 28 }} py={12} mt={85} >
       {header ? (
         <Box display={"flex"} gap={2} alignItems={"center"}>
           {backIcon ? <ArrowBackIcon color="#8094ae" fontSize={20} /> : null}
