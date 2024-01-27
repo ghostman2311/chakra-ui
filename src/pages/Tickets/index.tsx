@@ -279,8 +279,8 @@ const Tickets = () => {
               <FaRegMessage color="white" />
             </Box>
           </Box>
-          <Box w={{ base: "80%",md:'93%'}} display='flex' flexDirection={{base:'column',md:'row'}} justifyContent={{base:'start',md:'space-between'}}>
-            <Text color="#526484" fontSize={15}>
+          <Box w={{ base: "80%",md:'93%'}} display='flex' flexDirection={{base:'column',md:'row'}} justifyContent={{base:'start',md:'space-between'}} alignItems={{md:'center'}}>
+            <Text color="#526484" fontSize={15} fontWeight={700}>
               If you don’t find your question please contact our support team.
             </Text>
            

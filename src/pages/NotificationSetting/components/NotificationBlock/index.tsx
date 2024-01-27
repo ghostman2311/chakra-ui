@@ -20,8 +20,8 @@ const NotificationBlock = ({ data }: IData) => {
     <>
       {data?.map((item, i) => {
         return (
-          <Box key={i} mt={9} color={"title"}>
-            <Heading as="h4" size="md" sx={{ color: "title" }}>
+          <Box key={i} mt={5} color={"title"}>
+            <Heading as="h5" size="md" sx={{ color: "title" }}>
               {item?.title}
             </Heading>
             <Text

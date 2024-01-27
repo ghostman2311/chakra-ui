@@ -13,7 +13,7 @@ const CommonBillingBlock = ({
   children,
 }: ICommonBillingBlock) => {
   return (
-    <Box mt={9} color={'title'}>
+    <Box mt={5} color={'title'}>
       <Heading as="h4" size="md" sx={{color:'title'}}>
      {title}
       </Heading>

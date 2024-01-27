@@ -8,7 +8,7 @@ import {
     Thead,
     Tr,
   } from "@chakra-ui/table";
-import { Box, Text } from '@chakra-ui/layout';
+import { Box, Heading, Text } from '@chakra-ui/layout';
 import { GoDotFill } from "react-icons/go";
 import { ReactNode } from "react";
 
@@ -31,7 +31,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
   return (
     <TableContainer border="1px solid #203247" borderRadius={5} mt={10} backgroundColor={"specificBackground"}>
        { title?<Box display='flex' justifyContent={'space-between'} p={5}>
-            <Text color='heading' fontSize={16}>{title}</Text>
+            <Heading as='h6' fontSize={16}>{title}</Heading>
             <Box color='active' fontSize={12}>{link}</Box>
         </Box>:null}
     <Table variant="simple" backgroundColor={"specificBackground"}>
@@ -90,6 +90,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
                 border={"none"}
                 color={"active"}
                 fontWeight={600}
+                fontSize={'14'}
                 width={"7%"}
               >
                 {item?.id}
@@ -101,7 +102,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
                 sx={{ display: "flex", justifyContent: "space-between" }}
                 flexDirection={{ base: "column", md: "row" }}
               >
-                <Box w={{ base: "60%" }}>{item?.billFor}</Box>
+                <Box w={{ base: "60%" }} fontSize={14}>{item?.billFor}</Box>
                 <Box
                   display={"flex"}
                   mt={{ base: 2, md: 0 }}
@@ -124,7 +125,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
                 sx={{ display: "flex", justifyContent: "space-between" }}
                 flexDirection={{ base: "column", md: "row" }}
               >
-                <Box color={"#B6C6E3"} w={{ base: "50%" }}>
+                <Box color={"#B6C6E3"} w={{ base: "50%" }} fontSize={14}>
                   {item?.amount}
                 </Box>
                 <Box
@@ -136,6 +137,8 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
                       : "#1EE0AC"
                   }
                   display={"flex"}
+                  alignItems={'center'}
+                  fontSize={12}
                   w={{ base: "50%" }}
                   mt={{ base: 2, md: 0 }}
                 >

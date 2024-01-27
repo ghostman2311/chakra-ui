@@ -1,4 +1,4 @@
-import { Box, Grid, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import OutlineButton from "../Button/Outlined";
 import Desktop from "../../assets/dashboard/desktop.svg";
 
@@ -29,9 +29,9 @@ const Support = () => {
         </Box>
 
         <Box w={{ base: "100%", md: "60%" }} my={{ base: 4, md: 0 }}>
-          <Text fontSize="1.2rem" fontWeight="600" color="title">
+          <Heading as='h5' fontSize="20" fontWeight="600" color="title">
             We’re here to help you!
-          </Text>
+          </Heading>
 
           <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
             Ask a question or file a support ticketn or report an issues. Our
@@ -43,7 +43,7 @@ const Support = () => {
           justifyContent={{ base: "start", md: "end" }}
           my={{ base: 4, md: 0 }}
           alignItems={"center"}
-          w={{ base: "100%", md: "20%" }}
+          w={{ base: "100%", md: "25%" }}
         >
           <OutlineButton title="Get Support Now" />
         </Box>

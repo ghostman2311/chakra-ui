@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/layout";
+import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/layout";
 import ContainedButton from "../../../components/Button/Contained";
 
 interface IPlanBlock {
@@ -33,9 +33,9 @@ const PlanBlock = ({
         p={7}
       >
         <img src={img} alt="Your SVG" height={90} width={90} />
-        <Text fontSize="20" fontWeight="600" color={"title"}>
+        <Heading as='h5' fontSize="20" fontWeight="600" color={"title"}>
           {level}
-        </Text>
+        </Heading>
         <Text
           color="#8094ae"
           fontSize="14"

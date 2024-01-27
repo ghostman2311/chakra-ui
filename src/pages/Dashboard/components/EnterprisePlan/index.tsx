@@ -1,4 +1,4 @@
-import { Box, Grid, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import ContainedButton from "../../../../components/Button/Contained";
 interface IObject {
   plan: string;
@@ -18,7 +18,7 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
       overflow="hidden"
       // bgColor={"#18212d"}
       bgColor={"specificBackground"}
-      borderRadius={10}
+      borderRadius={4}
       sx={{ border: "1px solid #203247" }}
     >
       <Box
@@ -29,10 +29,10 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
         p={7}
       >
         <Box>
-          <Text fontSize="1rem" fontWeight="600" color={"heading"}>
-            <span style={{ color: "title" }}>{data.plan} - </span>
-            {data?.amount}
-          </Text>
+          <Heading as='h6' fontSize="1rem" fontWeight="600" color={"title"}>
+         {data.plan} - 
+         <span style={{ color: "#B6C6E3" }}> {data?.amount}</span>
+          </Heading>
 
           <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
             {data?.subTitle}
@@ -44,7 +44,7 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
           my={{ base: 4, md: 0 }}
           alignContent={"center"}
         >
-          <ContainedButton title={data?.buttonText} />
+          <ContainedButton title={data?.buttonText} fontSize={13} />
         </Box>
       </Box>
       <Box
@@ -55,7 +55,8 @@ const EnterprisePlan = ({ data }: IEnterpriseplan) => {
       >
         <Text color="main" fontSize="14" fontWeight="400" mt={2}>
           <span style={{ color: "#8094ae" }}>
-            Learn more about our subscription options.
+            Learn more about our  
+            <span style={{color:"#798BFF"}}> subscription options.</span>
           </span>
         </Text>
       </Box>

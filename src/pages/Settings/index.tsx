@@ -1,4 +1,4 @@
-import { Badge, Box, Grid, Text } from "@chakra-ui/layout";
+import { Badge, Box, Grid, Heading, Text } from "@chakra-ui/layout";
 import WrapperBlock from "../PersonalInformation/components";
 import ContainedButton from "../../components/Button/Contained";
 import { Switch } from "@chakra-ui/switch";
@@ -53,9 +53,9 @@ const Setting = () => {
             borderBottom="1px solid #203247"
           >
             <Box>
-              <Text fontSize="1rem" fontWeight="600" color="title">
+              <Heading as='h6' fontSize="1rem" fontWeight="600" color="title">
                 Save my Activity Logs
-              </Text>
+              </Heading>
 
               <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
                 You can save your all activity logs including unusual activity
@@ -72,9 +72,9 @@ const Setting = () => {
             p={7}
           >
             <Box>
-              <Text fontSize="1rem" fontWeight="600" color="title">
+            <Heading as='h6' fontSize={'16'} fontWeight="600" color="title">
                 Change Password
-              </Text>
+              </Heading>
 
               <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
                 Set a unique password to protect your account.
@@ -90,7 +90,7 @@ const Setting = () => {
               <Text color="#8094ae" fontSize="12" fontWeight="400" mt={2}>
                 Last changed: Oct 2, 2019
               </Text>{" "}
-              <ContainedButton title="Change Password" />
+              <ContainedButton title="Change Password" fontSize={13} />
             </Box>
           </Box>
           <Box
@@ -101,9 +101,9 @@ const Setting = () => {
           >
             <Box width={{ base: "100%", md: "80%" }}>
               <Box sx={{ display: "flex", gap: 3 }}>
-                <Text fontSize="1rem" fontWeight="600" color="title">
+                <Heading  as='h6' fontSize='16' fontWeight="600" color="title">
                   2FA Authentication
-                </Text>
+                </Heading>
                 <Badge
                   bgColor="#1ee0ac"
                   color="white"
@@ -130,7 +130,7 @@ const Setting = () => {
               alignItems={"center"}
               gap={4}
             >
-              <ContainedButton title="Disable" />
+              <ContainedButton title="Disable" fontSize={13}/>
             </Box>
           </Box>
         </Grid>

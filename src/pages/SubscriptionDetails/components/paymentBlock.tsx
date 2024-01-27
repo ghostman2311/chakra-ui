@@ -1,5 +1,5 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import { Box, Grid, GridItem, Stack, Text } from '@chakra-ui/layout'
+import { Box, Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/layout'
 import Desktop from "../../../assets/dashboard/desktop.svg";
 
 import ContainedButton from '../../../components/Button/Contained'
@@ -23,9 +23,9 @@ const PaymentBlock=()=> {
           py={4}
         >
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
-            <Text fontSize="1.2rem" fontWeight="600" color="title">
+            <Heading as='h6'  fontSize="16.8" fontWeight="600" color="title">
               Plan Details
-            </Text>
+            </Heading>
             <Box
               w="100%"
               display="flex"
@@ -38,10 +38,10 @@ const PaymentBlock=()=> {
                 flexDirection={{ base: "row", sm: "column" }}
                 justifyContent={"space-between"}
               >
-                <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+                <Text fontSize="14" fontWeight="600" color={"#8094ae"}>
                   Started On
                 </Text>
-                <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+                <Text color="#526484" fontSize="14"  fontWeight="600" mt={1}>
                   Oct 12, 2018
                 </Text>
               </Box>
@@ -52,10 +52,10 @@ const PaymentBlock=()=> {
                 flexDirection={{ base: "row", sm: "column" }}
                 justifyContent={"space-between"}
               >
-                <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+                <Text fontSize="14"  fontWeight="600" color={"#8094ae"}>
                   Price
                 </Text>
-                <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+                <Text color="#526484" fontSize="14"  fontWeight="600" mt={1}>
                   $249.00 /Year
                 </Text>
               </Box>
@@ -65,10 +65,10 @@ const PaymentBlock=()=> {
                 flexDirection={{ base: "row", sm: "column" }}
                 justifyContent={"space-between"}
               >
-                <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+                <Text fontSize="14"  fontWeight="600" color={"#8094ae"}>
                   Access
                 </Text>
-                <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+                <Text color="#526484" fontSize="14"  fontWeight="600" mt={1}>
                   Unlimited
                 </Text>
               </Box>
@@ -77,9 +77,9 @@ const PaymentBlock=()=> {
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
-                <Text fontSize="1.2rem" fontWeight="600" color="title">
+              <Heading as='h6'  fontSize="16.8"  fontWeight="600" color="title">
                   Next Payment
-                </Text>
+                </Heading>
               </Box>
               <Box
                 display={"flex"}
@@ -90,27 +90,27 @@ const PaymentBlock=()=> {
                 <Text fontSize={13} color="#F4BD0E" pr="4">
                   Due
                 </Text>
-                <Text fontSize="1.2rem" fontWeight="600" color="title">
+                <Text fontSize="16" fontWeight="6   00" color="title">
                   $599.00
                 </Text>
               </Box>
             </Box>
-            <Text fontSize="1rem" fontWeight="600" color={"#8094ae"} mt={2}>
+            <Text fontSize="14" fontWeight="600" color={"#8094ae"} mt={2}>
             Pay With
             </Text>
             <Box w={{base:'100%',md:'60%'}} display={'flex'} gap='4' mt={4}>
               <Stack spacing={3} width={'70%'}>
                 <Select  size="md" />
               </Stack>
-              <ContainedButton title="Pay Now" bgColor="#364a63" backIcon={ <ArrowForwardIcon marginLeft={10} />}/>
+              <ContainedButton title="Pay Now" fontSize={'13'} bgColor="#364a63" backIcon={ <ArrowForwardIcon marginLeft={10} />}/>
             </Box>
           </Box>
           <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
-                <Text fontSize="1.2rem" fontWeight="600" color="title">
+              <Heading as='h6'  fontSize="16.8"  fontWeight="600" color="title">
                   Last Payment
-                </Text>
+                </Heading>
               </Box>
               <Box
                 display={"flex"}
@@ -121,12 +121,12 @@ const PaymentBlock=()=> {
                 <Text fontSize={13} color="#1EE0AC" pr="4">
                   Paid
                 </Text>
-                <Text fontSize="1.2rem" fontWeight="600" color="title">
+                <Text fontSize="16" fontWeight="600" color="title">
                   $599.00
                 </Text>
               </Box>
             </Box>
-            <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+            <Text fontSize="13" fontWeight="600" color={"#8094ae"}>
               Started On
             </Text>
           </Box>
@@ -137,7 +137,7 @@ const PaymentBlock=()=> {
                   fontSize={20}
                   style={{ color: "#6576FF", marginRight: "10px" }}
                 />
-                <Text fontSize="1rem" fontWeight="600" color="title">
+                <Text fontSize="13.6" fontWeight="600" color="active">
                   Change Billing Method
                 </Text>
               </Box>
@@ -171,7 +171,7 @@ const PaymentBlock=()=> {
             textAlign={{ base: "center", sm: "start", xl: "center" }}
             mb={{ base: 50, sm: 0, xl: 105 }}
             mt={{ base: 7, sm: 0, xl: 7 }}
-            w={{ base: "90%", sm: "40%", xl: "70%" }}
+            w={{ base: "90%", sm: "40%",md:'50%', xl: "80%" }}
           >
             <Text fontSize="1.2rem" fontWeight="600" color="title">
               Maintainance Support

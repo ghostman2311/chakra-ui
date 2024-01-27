@@ -9,6 +9,7 @@ import Support from "../../components/Support";
 import PageContainer from "../../components/PageContainer";
 import PaymentHistoryTable from "../PaymentHistory/component";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import EnterprisePlan from "./components/EnterprisePlan";
 
 const Dashboard = () => {
   const paymentHistoryColumnData = [
@@ -37,6 +38,14 @@ const Dashboard = () => {
       status: "Paid",
     },
   ];
+  const enterprisePlanData = {
+    plan: "Enterpise Plan",
+    amount: "$599.00 / Yearly",
+    buttonText: "View Plan",
+    subTitle:
+      "Unlimited access with priority support, 99.95% uptime, powerfull features and more...",
+    switch: true,
+  };
   return (
     <PageContainer
       title="Welcome, Abu Bin Ishtiyak"
@@ -86,55 +95,8 @@ const Dashboard = () => {
         />
       </Grid>
       {/* Enterprise plan*/}
-      <Grid
-        templateColumns={"1fr "}
-        mt={7}
-        overflow="hidden"
-        // bgColor={"#18212d"}
-        bg="specificBackground"
-        borderRadius={10}
-        sx={{ border: "1px solid #203247" }}
-      >
-        <Box
-          display={"flex"}
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
-          borderBottom="1px solid #203247"
-          p={7}
-        >
-          <Box>
-            <Text fontSize="1rem" fontWeight="600" color={"title"}>
-             Enterpise Plan - <span style={{color:"heading"}}>$599.00 /
-              Yearly </span> 
-            </Text>
-
-            <Text color="#8094ae" fontSize="14" fontWeight="400" mt={2}>
-              Unlimited access with priority support, 99.95% uptime, powerfull
-              features and more...
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent={{ base: "none", md: "center" }}
-            my={{ base: 4, md: 0 }}
-            alignContent={"center"}
-          >
-            <ContainedButton title="View Plan" />
-          </Box>
-        </Box>
-        <Box
-          display={"flex"}
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
-          p={7}
-        >
-          <Text color="main" fontSize="14" fontWeight="400" mt={2}>
-            <span style={{ color: "#8094ae" }}> Learn more about our</span>{" "}
-            subscription options.
-          </Text>
-        </Box>
-      </Grid>
-      
+    
+        <EnterprisePlan data={enterprisePlanData} />
        <PaymentHistoryTable data={paymentHistoryColumnData} title={'Payment History'} link={
       <Box>
       See All <ChevronRightIcon/>

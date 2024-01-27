@@ -84,7 +84,7 @@ const CommonBlock = ({ item, key }: ICommonBlock) => {
           w={{ base: "100%", sm: "40%" }}
           pl={{ base: 10, sm: 0 }}
         >
-          <ContainedButton title="Download" />
+          <ContainedButton title="Download" fontSize={13} />
         </Box>
       </Box>
     </Grid>

@@ -55,9 +55,10 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
     <Box
       w="100vw"
       bg="headerBackground"
+      opacity={1}
       px={{ base: 4, md: 14 }}
       py={2}
-      sx={{ borderBottom: "1px solid #203247" }}
+      sx={{ borderBottom: "1px solid #e5e9f2" }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}

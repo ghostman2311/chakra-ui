@@ -44,7 +44,8 @@ const semanticTokens = {
       _dark: "white",
     },
     headerBackground: {
-      _light: "rgba(var(--bs-white-rgb),var(--bs-bg-opacity))",
+      _light: "#f5f6fa",
+      
       _dark: "#101924",
     },
     background: {

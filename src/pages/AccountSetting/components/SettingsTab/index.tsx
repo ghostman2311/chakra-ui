@@ -28,6 +28,9 @@ const SettingTabs = ({ tabs }: Itabs) => {
       <TabList>
         {tabs?.map((tab, i) => (
           <Tab
+          paddingX={0}
+          marginRight={5}
+          pb={4}
             key={i}
             textAlign={"start"}
             _focus={{
@@ -38,6 +41,8 @@ const SettingTabs = ({ tabs }: Itabs) => {
               bgColor: "transparent",
               color: "title",
             }}
+            fontSize={13}
+            fontWeight={700}
             _hover={{ outline: "none", color: "title", border: "none" }}
             _selected={{
               outline: "none",
@@ -45,7 +50,7 @@ const SettingTabs = ({ tabs }: Itabs) => {
               borderRadius: 0,
               borderBottom: "3px solid #798BFF",
               bgColor: "transparent",
-              color: "main",
+              color: "active",
             }}
             onClick={() => handleTabChange(i)}
           >
@@ -56,7 +61,7 @@ const SettingTabs = ({ tabs }: Itabs) => {
 
       <TabPanels>
         {tabs?.map((item, i) => (
-          <TabPanel key={i} sx={{ px: 0 }} hidden={activeTab !== i}>
+          <TabPanel key={i} sx={{ px: 0 }} hidden={activeTab !== i} >
             {item?.component}
           </TabPanel>
         ))}

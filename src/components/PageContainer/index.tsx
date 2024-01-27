@@ -1,5 +1,5 @@
 import { Icon } from "@chakra-ui/icon";
-import { Box, Grid, GridItem, Text } from "@chakra-ui/layout";
+import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/layout";
 import OutlineButton from "../Button/Outlined";
 import { ArrowBackIcon, CloseIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import { ReactNode } from "react";
@@ -34,9 +34,9 @@ const PageContainer = ({
       {header ? (
         <Box display={"flex"} gap={2} alignItems={"center"}>
           {backIcon ? <ArrowBackIcon color="#8094ae" fontSize={20} /> : null}
-          <Text color="#8094ae" fontSize="1.4rem" fontWeight="400">
+          <span style={{fontSize:"16",color:"#8094ae", fontWeight:"400"}}>
             {header}
-          </Text>
+          </span>
         </Box>
       ) : null}
       <Grid
@@ -51,18 +51,19 @@ const PageContainer = ({
         <GridItem>
           <Box>
             {title ? (
-              <Text
+               <Heading as='h2' 
                 fontSize={{ base: "20", sm: "40" }}
                 fontWeight="400"
                 color={"title"}
+                mb={2}
               >
                 {title}
-              </Text>
+              </Heading>
             ) : null}
             {subTitle ? (
               <Text
                 color="#8094ae"
-                fontSize={{ md: 14, lg: "16" }}
+                fontSize={'14'}
                 fontWeight="400"
                 pr={1}
                 sx={{ textWrap: "no-wrap" }}
@@ -88,7 +89,7 @@ const PageContainer = ({
             justifyContent={{ base: "flex-start", md: "flex-end" }}
           >
             <Box>
-              <OutlineButton title={buttonText} icon={buttonIcon} />
+              <OutlineButton title={buttonText} icon={buttonIcon} fontSize={13} />
             </Box>
           </GridItem>
         ) : null}
@@ -108,9 +109,9 @@ const PageContainer = ({
                 gap={2}
               >
                 <Switch sx={{ color: "active" }} size="lg" isChecked={true} />
-                <Text color="#8094ae" fontSize="1rem" fontWeight="600">
+                <label color="#8094ae"  style={{fontSize:'14px'}}>
                   Auto renew
-                </Text>
+                </label>
               </Box>
               <ContainedButton
                 title={"Cancel Subscrition"}

@@ -75,34 +75,34 @@ const Subscription = () => {
             pt={5}
           >
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="600" color={"#8094ae"}>
                 Started On
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="600" mt={1}>
                 Oct 12, 2018
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="600" color={"#8094ae"}>
                 Recuring
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="600" mt={1}>
                 Yes
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="600" color={"#8094ae"}>
                 Price
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="600" mt={1}>
                 $599.00
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="600" color={"#8094ae"}>
                 Access
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="600" mt={1}>
                 Unlimited
               </Text>
             </Box>
@@ -119,7 +119,7 @@ const Subscription = () => {
           borderLeft={{ md: "1px solid #203247" }}
           borderTop={{ base: "1px solid #203247", md: "none" }}
         >
-          <ContainedButton title="Change Plan"/>
+          <ContainedButton title="Change Plan" fontSize={13}/>
           <Text
             color="#8094ae"
             fontSize="13"
@@ -190,34 +190,34 @@ const Subscription = () => {
             pt={5}
           >
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="400" color={"#8094ae"}>
                 Started On
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="400" mt={1}>
                 Oct 12, 2018
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="400" color={"#8094ae"}>
                 Recuring
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="400" mt={1}>
                 Yes
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="400" color={"#8094ae"}>
                 Price
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="400" mt={1}>
                 $599.00
               </Text>
             </Box>
             <Box w={{ base: "50%", md: "25%" }} pb={{ base: 5, md: 0 }}>
-              <Text fontSize="1rem" fontWeight="600" color={"#8094ae"}>
+              <Text fontSize="14" fontWeight="400" color={"#8094ae"}>
                 Access
               </Text>
-              <Text color="#526484" fontSize="1rem" fontWeight="600" mt={1}>
+              <Text color="#526484" fontSize="14" fontWeight="400" mt={1}>
                 Unlimited
               </Text>
             </Box>
@@ -236,7 +236,7 @@ const Subscription = () => {
           borderTop={{ base: "1px solid #203247", md: "none" }}
         >
 
-          <OutlineButton title=' Renew Plan'/>
+          <OutlineButton title=' Renew Plan' fontSize={13}/>
            
           <Text
             color="#8094ae"

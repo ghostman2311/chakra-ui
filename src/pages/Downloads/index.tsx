@@ -1,4 +1,3 @@
-import { Box, Text } from "@chakra-ui/react";
 import Support from "../../components/Support";
 import CommonBlock from "./components/CommonBlock";
 import PageContainer from "../../components/PageContainer";

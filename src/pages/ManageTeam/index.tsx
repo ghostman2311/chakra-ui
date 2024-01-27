@@ -135,7 +135,7 @@ import { Select } from "@chakra-ui/select";
                   >
                    <Avatar name={item?.name} src='https://bit.ly/broken-link' />
                    <Box>
-                    <Text color='white' fontWeight={600}>{item?.name}</Text>
+                    <Text color='title' fontWeight={600}>{item?.name}</Text>
                     <Text fontSize={12} color='#8094AE'>{item?.email}</Text>
                    </Box>
                   </Td>
