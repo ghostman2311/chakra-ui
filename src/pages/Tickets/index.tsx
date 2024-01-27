@@ -14,6 +14,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Avatar } from "@chakra-ui/avatar";
 import { FaRegMessage } from "react-icons/fa6";
 import ContainedButton from "../../components/Button/Contained";
+import { formatPropertyName } from "../../helpers";
 
 const Tickets = () => {
   const invoicesData = [
@@ -177,8 +178,8 @@ const Tickets = () => {
                         </Box>
                         <Box
                           w={{ base: "70%" }}
-                          fontSize={"13"}
-                          color="#8094AE"
+                          fontSize={"14"}
+                          color="tdFontColor"
                         >
                           {item?.subject}
                         </Box>
@@ -186,14 +187,12 @@ const Tickets = () => {
                     </Td>
                     <Td
                       border={"none"}
-                      color="#526484"
                       width={"15%"}
                       sx={{ display: "flex", justifyContent: "space-between" }}
                       flexDirection={{ base: "column", md: "row" }}
                       display={{ base: "none", md: "inline-block" }}
                     >
                       <Box
-                        color={"#B6C6E3"}
                         w={{ base: "40%" }}
                         mt={{ base: 2, md: 0 }}
                         fontSize={13}
@@ -204,14 +203,12 @@ const Tickets = () => {
                     </Td>
                     <Td
                       border={"none"}
-                      color="#526484"
                       width={"25%"}
                       sx={{ display: "flex", justifyContent: "space-between" }}
                       flexDirection={{ base: "column", md: "row" }}
                       display={{ base: "none", md: "inline-block" }}
                     >
                       <Box
-                        color={"#B6C6E3"}
                         w={{ base: "40%" }}
                         mt={{ base: 2, md: 0 }}
                         fontSize={13}
@@ -239,11 +236,16 @@ const Tickets = () => {
                     >
                       <Badge
                         variant="solid"
+                        borderRadius={3}
+                        fontSize={10.3}
                         backgroundColor={
-                          item?.status === "Open" ? "green" : "#344357"
+                          item?.status === "Open" ? "#1ee0ac" : "#000"
                         }
+                        textTransform='capitalize'
+                        border={ item?.status === "Open" ? "1px solid #1ee0ac" : "1px solid #344357"}
+                        color={item?.status === "Open" ?'#fff':'#e5e9f2'}
                       >
-                        {item?.status}
+                         {formatPropertyName(item?.status)} 
                       </Badge>
                       <ChevronRightIcon />
                     </Td>

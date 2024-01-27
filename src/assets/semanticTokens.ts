@@ -45,7 +45,6 @@ const semanticTokens = {
     },
     headerBackground: {
       _light: "#f5f6fa",
-      
       _dark: "#101924",
     },
     background: {
@@ -72,6 +71,11 @@ const semanticTokens = {
       _light: "rgba(0, 0, 0, 0.125)",
       _dark: "#203247",
     },
+    tdFontColor:{
+        _light: "#526484",
+        _dark: "#B6C6E3",
+    }
+
   },
 };
 
