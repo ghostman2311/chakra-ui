@@ -56,7 +56,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
       opacity={1}
       px={{ base: 4, md: 8, xl: 28 }}
       py={2}
-      sx={{ borderBottom: "1px",  borderColor:"borderColor"  }}
+      sx={{ borderBottom: "1px", borderColor: "borderColor" }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
@@ -103,8 +103,10 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
           <MenuList
             bg="#101924"
             sx={{
-              border: "1px solid #203247",
+              border: "1px",
               borderTop: "4px solid #798BFF",
+            
+              borderColor: "borderColor",
               py: 0,
             }}
           >
@@ -185,7 +187,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             color={"#8094AE"}
             fontSize={13}
             sx={{
-              border: "1px solid #203247",
+              // border: "1px solid #203247",
               borderTop: "4px solid #798BFF",
               py: 0,
             }}
@@ -246,7 +248,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             fontSize={12}
             _focus={{ outline: "none" }}
           >
-            <IoMdNotificationsOutline fontSize={"25"} color='#8094ae'/>
+            <IoMdNotificationsOutline fontSize={"25"} color="#8094ae" />
             {/* <BellIcon  /> */}
           </MenuButton>
           <MenuList
@@ -255,7 +257,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
             fontSize={13}
             width={{ base: "40vh", md: "50vh" }}
             sx={{
-              border: "1px solid #203247",
+              // border: "1px solid #203247",
               borderTop: "4px solid #798BFF",
               py: 0,
             }}
@@ -391,7 +393,7 @@ const Header = ({ DrawerHandle }: { DrawerHandle: () => void }) => {
           </MenuList>
         </Menu>
         <HamburgerIcon
-         color='#8094ae'
+          color="#8094ae"
           fontSize={25}
           display={{
             base: "inline-block",
