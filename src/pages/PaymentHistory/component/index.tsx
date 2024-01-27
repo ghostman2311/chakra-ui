@@ -35,7 +35,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
             <Box color='active' fontSize={12}>{link}</Box>
         </Box>:null}
     <Table variant="simple" backgroundColor={"specificBackground"}>
-      <Thead borderBottom={"1px solid #203247"}>
+      <Thead border={'none'}>
         <Tr height={"40px"} border={"none"} display={"flex"}>
           <Th border={"none"} width={"7%"}>
             #
@@ -85,7 +85,7 @@ const PaymentHistoryTable=({data,title,link}:IPaymentHistoryColumnData)=> {
       <Tbody>
         {data?.map((item, i) => {
           return (
-            <Tr borderBottom={"1px solid #203247"} display={"flex"} key={i}>
+            <Tr borderTop={"1px solid #203247"} display={"flex"} key={i}>
               <Td
                 border={"none"}
                 color={"active"}

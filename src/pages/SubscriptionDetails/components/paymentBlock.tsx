@@ -22,7 +22,7 @@ const PaymentBlock=()=> {
           sx={{ border: "1px solid #203247" }}
           py={4}
         >
-          <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
+          <Box borderBottom={"1px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Heading as='h6'  fontSize="16.8" fontWeight="600" color="title">
               Plan Details
             </Heading>
@@ -74,7 +74,7 @@ const PaymentBlock=()=> {
               </Box>
             </Box>
           </Box>
-          <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
+          <Box borderBottom={"1px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
               <Heading as='h6'  fontSize="16.8"  fontWeight="600" color="title">
@@ -105,7 +105,7 @@ const PaymentBlock=()=> {
               <ContainedButton title="Pay Now" fontSize={'13'} bgColor="#364a63" backIcon={ <ArrowForwardIcon marginLeft={10} />}/>
             </Box>
           </Box>
-          <Box borderBottom={"2px solid #203247 "} p={{ base: 5, xl: 4 }}>
+          <Box borderBottom={"1px solid #203247 "} p={{ base: 5, xl: 4 }}>
             <Box display={"flex"}>
               <Box w={{ base: "60%", sm: "70%" }}>
               <Heading as='h6'  fontSize="16.8"  fontWeight="600" color="title">
