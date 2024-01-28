@@ -36,7 +36,7 @@ const PersonalInformation = () => {
         title="Personal Information"
         subTitle="Basic info, like your name and address, that you use on Nio Platform."
       >
-        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}     sx={{ border: "1px", borderColor: "borderColor" }}>
+        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}  sx={{ border: "1px", borderColor: "borderColor" }}>
           {Object.entries(personalInformation).map(
             ([key, value], index, array) => (
               <Box
@@ -226,7 +226,8 @@ const PersonalInformation = () => {
                 p={7}
                 sx={{
                   borderBottom:
-                    index === array.length - 1 ? "none" : "1px solid #203247",
+                    index === array.length - 1 ? "none" : "1px",
+                  borderColor:'borderColor'
                 }}
               >
                 <Box

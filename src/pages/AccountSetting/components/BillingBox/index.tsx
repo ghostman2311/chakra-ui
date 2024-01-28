@@ -26,7 +26,8 @@ const BillingBox = ({
       mt={5}
       bgColor={"specificBackground"}
       borderRadius={4}
-      sx={{ border: "1px solid #203247" }}
+      
+      sx={{ border: "1px",borderColor:"borderColor" }}
     >
       <Box>
         <Heading as='h6' fontSize="16" fontWeight="600" color={"title"}>
