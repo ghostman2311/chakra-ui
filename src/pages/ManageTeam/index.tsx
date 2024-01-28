@@ -92,10 +92,7 @@ const ManageTeam = () => {
           mt={10}
         >
           <Table variant="simple" backgroundColor={"specificBackground"}>
-            <Thead
-              sx={{ border: "1px", borderColor: "borderColor" }}
-              bgColor={"header"}
-            >
+            <Thead bgColor={"header"}>
               <Tr height={"40px"} border={"none"} display={"flex"}>
                 <Th
                   border={"none"}
@@ -133,7 +130,7 @@ const ManageTeam = () => {
               {manageTeamData?.map((item, i) => {
                 return (
                   <Tr
-                    borderBottom={"1px solid #203247"}
+                    sx={{ borderTop: "1px", borderColor: "borderColor" }}
                     display={"flex"}
                     key={i}
                   >
