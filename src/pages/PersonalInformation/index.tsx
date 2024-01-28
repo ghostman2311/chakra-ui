@@ -93,9 +93,10 @@ const PersonalInformation = () => {
               Update Profile
             </Text>
             <Tabs color="#b6c6e3" variant="line" 
-             sx={{ border: "1px", borderColor: "borderColor" }}>
+            //  sx={{ borderBottom: "1px", borderColor: "borderColor" }}
+             >
           
-              <TabList>
+              <TabList sx={{borderBottom:'1px',borderColor:'borderColor'}}>
                 <Tab
                   textAlign={"start"}
                   _focus={{

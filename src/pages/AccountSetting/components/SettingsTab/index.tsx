@@ -25,7 +25,7 @@ const SettingTabs = ({ tabs }: Itabs) => {
       borderColor={"#203247"}
    
     >
-      <TabList>
+      <TabList sx={{borderBottom:'1px',borderColor:'borderColor'}}>
         {tabs?.map((tab, i) => (
           <Tab
           paddingX={0}
