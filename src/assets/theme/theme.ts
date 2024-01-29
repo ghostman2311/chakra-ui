@@ -2,6 +2,8 @@ import { colors } from "./colors";
 // import { textTheme } from "../../styles/Text/theme";
 // import { gridItem } from "../../styles/GridItem/theme";
 import semanticTokens from "../semanticTokens";
+import "@fontsource/nunito-sans";
+import '@fontsource/roboto';
 
 export const customTheme = {
   styles: {
@@ -19,8 +21,8 @@ export const customTheme = {
     useSystemColorMode: false,
   },
   fonts: {
-    body: "Nunito, sans-serif",
-    heading: "Nunito, sans-serif",
+    body: `'Roboto', sans-serif`,
+    heading: `'Nunito Sans', sans-serif`,
   },
   // colors,
   colors,
