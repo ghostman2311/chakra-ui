@@ -1,11 +1,8 @@
 import { Badge, Box, Grid, GridItem, Heading, Text } from "@chakra-ui/layout";
 import CommonModal from "../../../../../components/modal";
-import ContainedButton from "../../../../../components/Button/Contained";
-import { Button } from "@chakra-ui/button";
 import { Radio } from "@chakra-ui/radio";
-import { useState } from "react";
-import ChangePlanModal from "../changePlanModal";
-import CancelSubscription from "../cancelSubscription";
+import { ReactNode } from "react";
+
 
 interface Idata {
   title: string;
@@ -16,47 +13,25 @@ interface Idata {
 }
 
 interface ISubscription {
-  open: boolean;
-  onClose: () => void;
+  modalState: string;
   data: Array<Idata>;
+  onClose: () => void;
+  footerData: () => ReactNode;
 }
-const SubscriptionModal = ({ open, onClose, data }: ISubscription) => {
-  const [saveChangePlan, setSaveChangePlan] = useState(false);
-  const [cancelPlan, setCancelPlan] = useState(false);
-  const handleChangePlan = () => {
-    // onClose()
-    setSaveChangePlan(true);
-  };
-  const changePlanModalData = {
-    for: "change Plan",
-    title: "Plan Change Successfully!",
-    subtitle:
-      "It will effect at the end of your current billing cycle on 01 Feb 2020. We sent you a confirmation email (this may take up to 3 hours to receive).",
-    footerInstruction: "Earn upto $25 for each friend your refer!",
-  };
+
+const SubscriptionModal = ({
+  modalState,
+  data,
+  footerData,
+  onClose,
+}: ISubscription) => {
   return (
     <>
       <CommonModal
-        open={open}
+        open={modalState === "change"}
         paddingTop={1}
         onClose={onClose}
-        footer={
-          <Box display={"flex"} justifyContent={"center"} w={"100%"} gap={4}>
-            <ContainedButton
-              onClick={() => handleChangePlan()}
-              title="Change Plan"
-              fontSize={13}
-            />
-            <Button
-              onClick={() => setCancelPlan(true)}
-              color="#e85347"
-              backgroundColor={"#3d2a32"}
-              fontSize={13}
-            >
-              Cancel Plan
-            </Button>
-          </Box>
-        }
+        footer={footerData()}
       >
         <Box textAlign={"center"}>
           <Heading as="h4" fontSize={20} color="heading" mb={1}>
@@ -66,9 +41,14 @@ const SubscriptionModal = ({ open, onClose, data }: ISubscription) => {
             This change will become effective on Jan 14, 2020 on your account.
           </Text>
         </Box>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} mt={14}>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          mt={14}
+        >
           <Box
-            w={{ base:'73%',sm: "40%",md:'30%' }}
+            w={{ base: "73%", sm: "40%", md: "30%" }}
             sx={{
               border: "1px",
               borderColor: "borderColor",
@@ -196,20 +176,6 @@ const SubscriptionModal = ({ open, onClose, data }: ISubscription) => {
           );
         })}
       </CommonModal>
-      {saveChangePlan && (
-        <ChangePlanModal
-          open={saveChangePlan}
-          onClose={() => setSaveChangePlan(false)}
-          onBackModalClose={onClose}
-          data={changePlanModalData}
-        />
-      )}
-      {cancelPlan && (
-        <CancelSubscription
-          open={cancelPlan}
-          onClose={() => setCancelPlan(false)}
-        />
-      )}
     </>
   );
 };

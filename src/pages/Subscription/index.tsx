@@ -1,6 +1,7 @@
 import {
   Badge,
   Box,
+  Button,
   Grid,
   GridItem,
   Switch,
@@ -13,9 +14,11 @@ import PageContainer from "../../components/PageContainer";
 import { PlanHeader } from "./components/PlanHeader";
 import { useState } from "react";
 import SubscriptionModal from "./components/Modal/subscriptionsModal";
+import ChangePlanModal from "./components/Modal/changePlanModal";
+import CancelSubscription from "./components/Modal/cancelSubscription";
 
 const Subscription = () => {
-  const [changePlan, setChangePlan] = useState(false);
+  const [modalState, setModalState] = useState("");
   const changeSubscriptionOption = [
     {
       title: "Enterprise Plan ",
@@ -39,6 +42,39 @@ const Subscription = () => {
       amountFor: "Yearly",
     },
   ];
+
+  const changePlanModalData = {
+    for: "change Plan",
+    title: "Plan Change Successfully!",
+    subtitle:
+      "It will effect at the end of your current billing cycle on 01 Feb 2020. We sent you a confirmation email (this may take up to 3 hours to receive).",
+    footerInstruction: "Earn upto $25 for each friend your refer!",
+  };
+
+  const handleChangePlan = () => {
+    setModalState("handlePlan");
+  };
+  const getFooterContent = () => {
+    return (
+      <Box display={"flex"} justifyContent={"center"} w={"100%"} gap={4}>
+        <ContainedButton
+          onClick={() => handleChangePlan()}
+          title="Change Plan"
+          fontSize={13}
+        />
+        <Button
+          onClick={() => {
+            setModalState("cancel");
+          }}
+          color="#e85347"
+          backgroundColor={"#3d2a32"}
+          fontSize={13}
+        >
+          Cancel Plan
+        </Button>
+      </Box>
+    );
+  };
 
   return (
     <PageContainer
@@ -153,7 +189,7 @@ const Subscription = () => {
           <ContainedButton
             title="Change Plan"
             fontSize={13}
-            onClick={() => setChangePlan(true)}
+            onClick={() => setModalState("change")}
           />
           <Text
             color="#8094ae"
@@ -286,13 +322,28 @@ const Subscription = () => {
       </Grid>
       <Support />
 
-      {changePlan ?(
-      <SubscriptionModal 
-       open={changePlan} 
-      onClose={() => setChangePlan(false)}
-      data={changeSubscriptionOption}
-      />
-      ):null}
+      {modalState === "change" && (
+        <SubscriptionModal
+          modalState={modalState}
+          data={changeSubscriptionOption}
+          footerData={getFooterContent}
+          onClose={() => setModalState("")}
+        />
+      )}
+      {modalState === "handlePlan" && (
+        <ChangePlanModal
+          open={modalState === "handlePlan"}
+          onClose={() => setModalState("")}
+          onBackModalClose={() => {}}
+          data={changePlanModalData}
+        />
+      )}
+      {modalState === "cancel" && (
+        <CancelSubscription
+          open={modalState === "cancel"}
+          onClose={() => setModalState("")}
+        />
+      )}
     </PageContainer>
   );
 };

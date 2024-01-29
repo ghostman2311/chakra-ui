@@ -11,6 +11,7 @@ import PaymentHistory from "./pages/PaymentHistory";
 import ManageTeam from "./pages/ManageTeam";
 import Invoices from "./pages/Invoices";
 import Tickets from "./pages/Tickets";
+import './assets/styles.css';
 
 function App() {
   return (
