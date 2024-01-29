@@ -13,7 +13,7 @@ import { Box, Grid } from "@chakra-ui/layout";
 import { FiDownloadCloud } from "react-icons/fi";
 import { FaPrint } from "react-icons/fa6";
 import OutlineButton from "../../components/Button/Outlined";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const Invoices = () => {
   const invoicesData = [

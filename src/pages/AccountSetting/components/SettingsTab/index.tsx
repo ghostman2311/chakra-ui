@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { Tab, TabList, TabPanel, TabPanels, Tabs, useBreakpointValue } from "@chakra-ui/react";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 
 interface ItabsObject {
   key: string;

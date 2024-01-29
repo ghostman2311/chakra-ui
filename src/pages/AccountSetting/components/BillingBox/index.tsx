@@ -57,7 +57,7 @@ const BillingBox = ({
         my={{ base: 4, md: 0 }}
         alignContent={"center"}
       >
-        <Text color="active" fontSize="13" fontWeight="600" mt={2}>
+        <Text color="active" fontSize="13" fontWeight="600" mt={2} cursor={'pointer'}>
         {linkText}
         </Text>
       </Box>

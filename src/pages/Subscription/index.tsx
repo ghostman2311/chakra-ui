@@ -1,11 +1,45 @@
-import { Badge, Box, Grid, GridItem, Switch, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Grid,
+  GridItem,
+  Switch,
+  Text,
+} from "@chakra-ui/react";
 import Support from "../../components/Support";
 import ContainedButton from "../../components/Button/Contained";
 import OutlineButton from "../../components/Button/Outlined";
 import PageContainer from "../../components/PageContainer";
 import { PlanHeader } from "./components/PlanHeader";
+import { useState } from "react";
+import SubscriptionModal from "./components/Modal/subscriptionsModal";
 
 const Subscription = () => {
+  const [changePlan, setChangePlan] = useState(false);
+  const changeSubscriptionOption = [
+    {
+      title: "Enterprise Plan ",
+      subTitle: "Unlimited Access / $599.00 USD / Year",
+      active: true,
+      amount: "$599.00",
+      amountFor: "Yearly",
+    },
+    {
+      title: "NioPro Plan",
+      subTitle: "Unlimited Access / $249.00 USD / Year",
+      active: false,
+      amount: "$299.00",
+      amountFor: "Yearly",
+    },
+    {
+      title: "Free Plan",
+      subTitle: "Free Access / $0.00 USD / Year",
+      active: false,
+      amount: "$0.00",
+      amountFor: "Yearly",
+    },
+  ];
+
   return (
     <PageContainer
       header="Manage Subscription"
@@ -115,12 +149,12 @@ const Subscription = () => {
           flexDirection={{ md: "column" }}
           gap={2}
           p={{ base: 5, md: 16 }}
-          // borderLeft={{ md: "1px " }}
-          // borderTop={{ base: "1px ", md: "none" }}
-          // borderColor={'borderColor'}
-     
         >
-          <ContainedButton title="Change Plan" fontSize={13} />
+          <ContainedButton
+            title="Change Plan"
+            fontSize={13}
+            onClick={() => setChangePlan(true)}
+          />
           <Text
             color="#8094ae"
             fontSize="13"
@@ -235,7 +269,7 @@ const Subscription = () => {
           gap={2}
           p={{ base: 5, md: 16 }}
           // borderLeft={{ md: "1px" }}
-           borderTop={{ base: "1px ", md: "none" }}
+          borderTop={{ base: "1px ", md: "none" }}
           // borderColor="borderColor"
         >
           <OutlineButton title=" Renew Plan" fontSize={13} />
@@ -251,6 +285,14 @@ const Subscription = () => {
         </GridItem>
       </Grid>
       <Support />
+
+      {changePlan ?(
+      <SubscriptionModal 
+       open={changePlan} 
+      onClose={() => setChangePlan(false)}
+      data={changeSubscriptionOption}
+      />
+      ):null}
     </PageContainer>
   );
 };

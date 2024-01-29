@@ -28,7 +28,6 @@ const PersonalInformation = () => {
 
   const handleModel = () => {
     setOpenModal(true);
-    console.log("iambdbdb");
   };
   return (
     <>
@@ -36,7 +35,12 @@ const PersonalInformation = () => {
         title="Personal Information"
         subTitle="Basic info, like your name and address, that you use on Nio Platform."
       >
-        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}  sx={{ border: "1px", borderColor: "borderColor" }}>
+        <Grid
+          mt={5}
+          bgColor={"specificBackground"}
+          borderRadius={10}
+          sx={{ border: "1px", borderColor: "borderColor" }}
+        >
           {Object.entries(personalInformation).map(
             ([key, value], index, array) => (
               <Box
@@ -44,8 +48,10 @@ const PersonalInformation = () => {
                 display={"flex"}
                 justifyContent={"space-between"}
                 p={7}
-                sx={{ borderBottom: index === array.length - 1 ? "none" : "1px", borderColor: "borderColor" }}
-               
+                sx={{
+                  borderBottom: index === array.length - 1 ? "none" : "1px",
+                  borderColor: "borderColor",
+                }}
               >
                 <Box
                   display={"flex"}
@@ -68,6 +74,7 @@ const PersonalInformation = () => {
                   <ChevronRightIcon
                     fontSize={20}
                     color={"#8094AE"}
+                    sx={{cursor:'pointer'}}
                     onClick={() => handleModel()}
                   />
                 </Box>
@@ -89,14 +96,15 @@ const PersonalInformation = () => {
               </>
             }
           >
-            <Text fontSize={20}  color='heading' mb={4}>
+            <Text fontSize={20} color="heading" mb={4}>
               Update Profile
             </Text>
-            <Tabs color="#b6c6e3" variant="line" 
-            //  sx={{ borderBottom: "1px", borderColor: "borderColor" }}
-             >
-          
-              <TabList sx={{borderBottom:'1px',borderColor:'borderColor'}}>
+            <Tabs
+              color="#b6c6e3"
+              variant="line"
+              //  sx={{ borderBottom: "1px", borderColor: "borderColor" }}
+            >
+              <TabList sx={{ borderBottom: "1px", borderColor: "borderColor" }}>
                 <Tab
                   textAlign={"start"}
                   _focus={{
@@ -217,7 +225,12 @@ const PersonalInformation = () => {
         title="Personal Preferences"
         subTitle="Your personalized preference allows you best use."
       >
-        <Grid mt={5} bgColor={"specificBackground"} borderRadius={10}  sx={{ border: "1px", borderColor: "borderColor" }}>
+        <Grid
+          mt={5}
+          bgColor={"specificBackground"}
+          borderRadius={10}
+          sx={{ border: "1px", borderColor: "borderColor" }}
+        >
           {Object.entries(personalPreference).map(
             ([key, value], index, array) => (
               <Box
@@ -226,9 +239,8 @@ const PersonalInformation = () => {
                 justifyContent={"space-between"}
                 p={7}
                 sx={{
-                  borderBottom:
-                    index === array.length - 1 ? "none" : "1px",
-                  borderColor:'borderColor'
+                  borderBottom: index === array.length - 1 ? "none" : "1px",
+                  borderColor: "borderColor",
                 }}
               >
                 <Box
@@ -248,7 +260,10 @@ const PersonalInformation = () => {
                     </Text>
                   </Box>
                 </Box>
-                <Box sx={{ width: "20%", textAlign: "end" }}>
+                <Box
+                  sx={{ width: "20%", textAlign: "end",cursor:'pointer' }}
+                  onClick={() => handleModel()}
+                >
                   <Text fontSize={14} fontWeight="600" color={"active"}>
                     Change
                   </Text>
