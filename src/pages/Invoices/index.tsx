@@ -14,8 +14,10 @@ import { FiDownloadCloud } from "react-icons/fi";
 import { FaPrint } from "react-icons/fa6";
 import OutlineButton from "../../components/Button/Outlined";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { useNavigate } from 'react-router-dom';
 
 const Invoices = () => {
+  const navigate = useNavigate();
   const invoicesData = [
     {
       id: "746F5K2",
@@ -224,10 +226,12 @@ const Invoices = () => {
                           }}
                         >
                           <FaPrint />
+
                           <OutlineButton
                             title="View"
                             fontSize={10}
                             sx={{ height: "27px" }}
+                            onClick={()=>  navigate('/invoice-details')}
                           />
                         </Box>
                       </Box>

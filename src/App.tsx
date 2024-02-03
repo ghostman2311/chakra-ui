@@ -11,6 +11,7 @@ import PaymentHistory from "./pages/PaymentHistory";
 import ManageTeam from "./pages/ManageTeam";
 import Invoices from "./pages/Invoices";
 import Tickets from "./pages/Tickets";
+import InvoiceDetail from "./pages/InvoiceDetails";
 import './assets/styles.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="manage-team" element={<ManageTeam />} />
         <Route path="invoices" element={<Invoices />} />
         <Route path='tickets' element={<Tickets/>}/>
+        <Route path='invoice-details' element={<InvoiceDetail/>}/>
       </Route>
     </Routes>
   );

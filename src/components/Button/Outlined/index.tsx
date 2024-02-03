@@ -6,9 +6,10 @@ interface IOutlinedButton {
   title: string;
   sx?: SystemStyleObject;
   icon?:ReactNode;
+  onClick?:()=>void;
 }
 
-const OutlineButton = ({ fontSize, title, sx ,icon}: IOutlinedButton) => {
+const OutlineButton = ({ fontSize, title, sx ,icon,onClick}: IOutlinedButton) => {
   return (
     <Button
       bgColor={"background"}
@@ -16,6 +17,7 @@ const OutlineButton = ({ fontSize, title, sx ,icon}: IOutlinedButton) => {
       borderColor={"active"}
       variant="outline"
       fontSize={fontSize ? fontSize : 15}
+      onClick={onClick}
       sx={{
         "&:hover": {
           bgColor: "active",
