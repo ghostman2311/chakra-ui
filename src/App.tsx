@@ -12,6 +12,7 @@ import ManageTeam from "./pages/ManageTeam";
 import Invoices from "./pages/Invoices";
 import Tickets from "./pages/Tickets";
 import InvoiceDetail from "./pages/InvoiceDetails";
+import './assets/styles.css';
 
 function App() {
   return (

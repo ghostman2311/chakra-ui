@@ -4,12 +4,12 @@ import Account from "../../assets/dashboard/account.svg";
 import Billing from "../../assets/dashboard/billing.svg";
 import Info from "../../assets/dashboard/info.svg";
 import DashboardBox from "./components/DashboardBox";
-import ContainedButton from "../../components/Button/Contained";
 import Support from "../../components/Support";
 import PageContainer from "../../components/PageContainer";
 import PaymentHistoryTable from "../PaymentHistory/component";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import EnterprisePlan from "./components/EnterprisePlan";
+
 
 const Dashboard = () => {
   const paymentHistoryColumnData = [

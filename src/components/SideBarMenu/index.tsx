@@ -1,6 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { MdOutlineDashboard } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import "@fontsource/nunito-sans";
 
 interface ISideBarMenu {
   mt?: number;
@@ -110,6 +111,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               fontSize={15}
               fontWeight={700}
               sx={{ textWrap: "nowrap", letterSpacing: ".01em" }}
+              fontFamily={'heading'}
             >
               {item?.name}
             </Text>
@@ -117,7 +119,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
           </Link>
         );
       })}
-      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>
+      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14} fontFamily={'heading'}>
         SEE OTHERS
       </Text>
       {seeOthers.map((item, i) => {
@@ -137,6 +139,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               fontSize={!item?.icon ? 14 : 15}
               fontWeight={item?.icon ? 700 : 400}
               sx={{ textWrap: "nowrap" }}
+              fontFamily={'heading'}
             >
               {item?.name}
             </Text>
@@ -144,7 +147,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
           </Link>
         );
       })}
-      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14}>
+      <Text fontSize={11} color="#B6C6E3" fontWeight={700} mt={14} fontFamily={'heading'}>
         RETURN TO
       </Text>
       {returnTo.map((item, i) => {
@@ -155,7 +158,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
             _hover={{ color: "main" }}
           >
             <MdOutlineDashboard fontSize={25} />
-            <Text fontSize={15} fontWeight={700}>
+            <Text fontSize={15} fontWeight={700} fontFamily={'heading'}>
               {item?.name}
             </Text>
           </Box>
@@ -169,7 +172,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
               sx={{ display: "flex", gap: 3, mt: 3, cursor: "pointer" }}
               _hover={{ color: "main" }}
             >
-              <Text fontSize={13} fontWeight={700}>
+              <Text fontSize={13} fontWeight={700} fontFamily={'heading'}>
                 {item?.name}
               </Text>
             </Box>
