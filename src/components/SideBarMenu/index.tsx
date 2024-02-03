@@ -92,6 +92,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
 
   return (
     <Box color={"#8094AE"} mt={mt ? mt : 2} pl={{ base: 0, md: 8, xl: 28 }} >
+      
       <Text fontSize={11} color="#B6C6E3" fontWeight={700}>
         MENU
       </Text>
