@@ -152,6 +152,7 @@ const SideBarMenu = ({ mt }: ISideBarMenu) => {
             sx={{ display: "flex", gap: 3, mt: 5, cursor: "pointer" }}
             _hover={{ color: "main" }}
           >
+            
             <MdOutlineDashboard fontSize={25} />
             <Text fontSize={15} fontWeight={700}>
               {item?.name}
