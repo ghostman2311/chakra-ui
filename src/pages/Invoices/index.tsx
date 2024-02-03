@@ -224,6 +224,7 @@ const Invoices = () => {
                           }}
                         >
                           <FaPrint />
+
                           <OutlineButton
                             title="View"
                             fontSize={10}
